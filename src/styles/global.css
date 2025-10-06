@@ -1,0 +1,90 @@
+@import "./dana-font-face.css";
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+@utility container {
+    @apply mx-auto 2xl:max-w-407 px-4;
+}
+
+@theme {
+    --breakpoint-xx: 21rem;
+    --breakpoint-xs: 24.375rem;
+    --breakpoint-sm: 36rem;
+    --breakpoint-2xl: 90rem;
+
+    /* fonts */
+    --font-dana: "dana", serif;
+
+    /* colors */
+    --color-primary-bg: #fff;
+    --color-primary-txt: var(--color-slate-900);
+    --color-grey-15: var(--color-neutral-300);
+    --color-glass: rgba(0, 0, 0, .18);
+    --color-header-bg: var(--color-gray-100);
+    --color-grey-10: var(--color-gray-200);
+    --color-dark-blue-15: var(--color-violet-200);
+    --color-grey-60: var(--color-neutral-500);
+    --color-grey-30: var(--color-zinc-400);
+
+    /* box shadow */
+    --shadow-custom-no-blur: 0 0 0 4px var(--color-grey-10);
+
+    /* border radius */
+    --radius-custom: 10px;
+    --radius-custom-28: 28px;
+}
+
+.dark {
+    --color-primary-bg: var(--color-zinc-900);
+    --color-primary-txt: var(--color-slate-50);
+    --color-header-bg: #1E1E1E;
+    --color-grey-10: #1A1A1A;
+    --color-grey-15: #262626;
+    --color-grey-60: var(--color-neutral-400);
+    --color-glass: rgba(255, 255, 255, .1);
+    --color-dark-blue-15: #211E2F;
+    --color-grey-30: var(--color-zinc-600);
+}
+
+@utility nav-mobile {
+    @apply fixed z-30 w-40 flex-col bg-grey-10 bottom-0 top-0 pt-8 transition-all duration-200;
+}
+
+@layer base {
+    html {
+        @apply scroll-smooth;
+    }
+    body {
+        @apply font-dana leading-[150%] font-normal text-base tracking-wide bg-primary-bg text-primary-txt;
+    }
+    h1, h2, h3 {
+        @apply font-bold;
+    }
+    h4, h5, h6 {
+        @apply font-medium;
+    }
+    h1 {
+        @apply text-3xl md:text-5xl xl:text-6xl leading-[140%];
+    }
+    h2 {
+        @apply text-2xl md:text-4xl lg:text-5xl;
+    }
+    h3 {
+        @apply text-xl md:text-2xl lg:text-3xl;
+    }
+    a {
+        @apply font-medium hover:opacity-70 active:opacity-70 transition-all;
+    }
+}
+
+@layer components {
+    .underline-link {
+        @apply relative before:block before:bg-inherit before:border-b before:border-inherit before:absolute before:bottom-[2px] before:w-full;
+    }
+    .primary-btn {
+        @apply rounded-lg px-3 py-1.5 bg-violet-600 text-white cursor-pointer hover:opacity-85 transition-all text-sm lg:text-base xl:py-2 xl:px-5;
+    }
+    .secondary-btn {
+        @apply rounded-lg px-3 py-1.5 border bg-grey-10 border-grey-15 cursor-pointer hover:opacity-75 transition-all text-sm lg:text-base xl:py-2 xl:px-5;
+    }
+}
