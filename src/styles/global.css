@@ -20,34 +20,20 @@
     --color-primary-txt: var(--color-zinc-800);
     --color-secondary-txt: var(--color-zinc-500);
     --color-disable-txt: var(--color-zinc-400);
-    --color-header-bg: var(--color-gray-100);
-    --color-grey-10: var(--color-gray-200);
-    --color-dark-blue-15: var(--color-violet-200);
-    --color-grey-60: var(--color-neutral-500);
-    --color-grey-30: var(--color-zinc-400);
-
-    /* box shadow */
-    --shadow-custom-no-blur: 0 0 0 4px var(--color-grey-10);
-
-    /* border radius */
-    --radius-custom: 10px;
-    --radius-custom-28: 28px;
+    --color-active: var(--color-zinc-400);
+    --color-hover: #3A35410A;
 }
 
 .dark {
     --color-primary-bg: var(--color-gray-900);
-    --color-primary-txt: var(--color-slate-50);
-    --color-header-bg: #1E1E1E;
+    --color-primary-txt: var(--color-slate-100);
+    --color-secondary-txt: #E7E3FCDE;
+    --color-disable-txt: #E7E3FCDE;
     --color-grey-10: #1A1A1A;
-    --color-grey-15: #262626;
-    --color-grey-60: var(--color-neutral-400);
-    --color-glass: rgba(255, 255, 255, .1);
-    --color-dark-blue-15: #211E2F;
-    --color-grey-30: var(--color-zinc-600);
 }
 
 @utility nav-mobile {
-    @apply fixed z-30 w-40 flex-col bg-grey-10 bottom-0 top-0 pt-8 transition-all duration-200;
+    @apply fixed z-30 w-40 flex-col bottom-0 top-0 pt-8 transition-all duration-200;
 }
 
 @layer base {
