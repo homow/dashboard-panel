@@ -1,7 +1,9 @@
-import React from 'react'
+import ThemeSection from './ThemeSection.jsx'
 
 export default function TopBar() {
     return (
-        <div>TopBar</div>
+        <div>
+            <ThemeSection/>
+        </div>
     )
 }
