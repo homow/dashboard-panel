@@ -1,10 +1,15 @@
-import React from 'react'
+import TopBar from "@/layout/TopBar";
+import MainLayout from "@/layout/MainLayout";
+import SideBar from "@/layout/SideBar";
 
 export default function App() {
     return (
-        <div>
-            <div className={"w-full py-5 bg-[#E7E3FCDE]"}>main</div>
-            <div className={"w-full py-5 bg-gray-400"}>main</div>
+        <div id="app-container" className="flex flex-row">
+            <SideBar/>
+            <div>
+                <TopBar/>
+                <MainLayout/>
+            </div>
         </div>
     )
 }

@@ -2,10 +2,6 @@
 @import "tailwindcss";
 @custom-variant dark (&:where(.dark, .dark *));
 
-@utility container {
-    @apply mx-auto 2xl:max-w-407 px-4;
-}
-
 @theme {
     --breakpoint-xx: 21rem;
     --breakpoint-xs: 24.375rem;
@@ -30,10 +26,6 @@
     --color-secondary-txt: #E7E3FCDE;
     --color-disable-txt: #E7E3FCDE;
     --color-grey-10: #1A1A1A;
-}
-
-@utility nav-mobile {
-    @apply fixed z-30 w-40 flex-col bottom-0 top-0 pt-8 transition-all duration-200;
 }
 
 @layer base {
@@ -64,13 +56,4 @@
 }
 
 @layer components {
-    .underline-link {
-        @apply relative before:block before:bg-inherit before:border-b before:border-inherit before:absolute before:bottom-[2px] before:w-full;
-    }
-    .primary-btn {
-        @apply rounded-lg px-3 py-1.5 bg-violet-600 text-white cursor-pointer hover:opacity-85 transition-all text-sm lg:text-base xl:py-2 xl:px-5;
-    }
-    .secondary-btn {
-        @apply rounded-lg px-3 py-1.5 border cursor-pointer hover:opacity-75 transition-all text-sm lg:text-base xl:py-2 xl:px-5;
-    }
 }
