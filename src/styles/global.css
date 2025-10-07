@@ -1,4 +1,4 @@
-@import "./dana-font-face.css";
+@import "./font-face.css";
 @import "tailwindcss";
 @custom-variant dark (&:where(.dark, .dark *));
 
@@ -13,13 +13,13 @@
     --breakpoint-2xl: 90rem;
 
     /* fonts */
-    --font-dana: "dana", serif;
+    --font-Inter: "Inter", "Helvetica Neue", Helvetica, Arial, sans-serif, monospace;
 
     /* colors */
     --color-primary-bg: #fff;
-    --color-primary-txt: var(--color-slate-900);
-    --color-grey-15: var(--color-neutral-300);
-    --color-glass: rgba(0, 0, 0, .18);
+    --color-primary-txt: var(--color-zinc-800);
+    --color-secondary-txt: var(--color-zinc-500);
+    --color-disable-txt: var(--color-zinc-400);
     --color-header-bg: var(--color-gray-100);
     --color-grey-10: var(--color-gray-200);
     --color-dark-blue-15: var(--color-violet-200);
@@ -35,7 +35,7 @@
 }
 
 .dark {
-    --color-primary-bg: var(--color-zinc-900);
+    --color-primary-bg: var(--color-gray-900);
     --color-primary-txt: var(--color-slate-50);
     --color-header-bg: #1E1E1E;
     --color-grey-10: #1A1A1A;
@@ -55,7 +55,7 @@
         @apply scroll-smooth;
     }
     body {
-        @apply font-dana leading-[150%] font-normal text-base tracking-wide bg-primary-bg text-primary-txt;
+        @apply font-Inter font-normal leading-[150%] text-base tracking-wide bg-primary-bg text-primary-txt;
     }
     h1, h2, h3 {
         @apply font-bold;
@@ -85,6 +85,6 @@
         @apply rounded-lg px-3 py-1.5 bg-violet-600 text-white cursor-pointer hover:opacity-85 transition-all text-sm lg:text-base xl:py-2 xl:px-5;
     }
     .secondary-btn {
-        @apply rounded-lg px-3 py-1.5 border bg-grey-10 border-grey-15 cursor-pointer hover:opacity-75 transition-all text-sm lg:text-base xl:py-2 xl:px-5;
+        @apply rounded-lg px-3 py-1.5 border cursor-pointer hover:opacity-75 transition-all text-sm lg:text-base xl:py-2 xl:px-5;
     }
 }
