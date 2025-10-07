@@ -38,7 +38,7 @@
 
 @layer base {
     html {
-        @apply scroll-smooth;
+        @apply transition-all scroll-smooth;
     }
     body {
         @apply font-Inter font-normal leading-[150%] text-base tracking-wide bg-primary-bg text-primary-txt;
