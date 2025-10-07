@@ -7,8 +7,10 @@ export default function App() {
     return (
         <div id="app-container" className="flex flex-row">
             <SvgDefs/>
+
             <SideBar/>
-            <div>
+
+            <div className={"flex-1"}>
                 <TopBar/>
                 <MainLayout/>
             </div>

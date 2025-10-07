@@ -1,9 +1,9 @@
-export default function Notification() {
+export default function SearchBar() {
     return (
         <div>
             <span>
                 <svg className={"size-6"}>
-                    <use href="#notification-icon"></use>
+                    <use href="#search-icon"></use>
                 </svg>
             </span>
         </div>
