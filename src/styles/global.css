@@ -12,7 +12,8 @@
     --font-Inter: "Inter", "Helvetica Neue", Helvetica, Arial, sans-serif, monospace;
 
     /* colors */
-    --color-primary-bg: #fff;
+    --color-primary-bg: var(--color-gray-100);
+    --color-main-bg: var(--color-white);
     --color-primary-txt: var(--color-zinc-800);
     --color-secondary-txt: var(--color-zinc-500);
     --color-disable-txt: var(--color-zinc-400);
@@ -22,6 +23,7 @@
 
 .dark {
     --color-primary-bg: var(--color-gray-900);
+    --color-main-bg: var(--color-gray-800);
     --color-primary-txt: var(--color-slate-100);
     --color-secondary-txt: #E7E3FCDE;
     --color-disable-txt: #E7E3FCDE;

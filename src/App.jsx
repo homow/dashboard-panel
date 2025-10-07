@@ -10,7 +10,7 @@ export default function App() {
 
             <SideBar/>
 
-            <div className={"flex-1"}>
+            <div className={"ml-65 flex-1 px-6"}>
                 <TopBar/>
                 <MainLayout/>
             </div>
