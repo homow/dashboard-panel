@@ -7,7 +7,7 @@ export default function MainLayout({className}) {
             <div id="main-content" className={"bg-main-bg py-3 h-full"}>
                 s
             </div>
-            <Footer className={""}/>
+            <Footer/>
         </div>
     )
 }

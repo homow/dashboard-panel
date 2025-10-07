@@ -17,9 +17,9 @@ function FooterLinks() {
     )
 }
 
-export default function Footer({className}) {
+export default function Footer() {
     return (
-        <div className={`fixed bottom-0 right-0 left-0 w-full flex flex-row justify-between py-3 pr-6 pl-[calc(var(--spacing-custom)+24px)] bg-primary-bg ${className}`}>
+        <div className={`fixed bottom-0 right-0 left-0 w-full flex flex-row justify-between py-3 pr-6 pl-[calc(var(--spacing-custom)+24px)] bg-primary-bg`}>
             <FooterCopyright/>
             <FooterLinks/>
         </div>
