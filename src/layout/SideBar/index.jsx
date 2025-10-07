@@ -1,12 +1,12 @@
 import {useState} from 'react'
-import TopSideBar from "@/layout/SideBar/TopSideBar/TopSideBar.jsx";
+import SideBarHeader from "@/layout/SideBar/SideBarHeader/SideBarHeader.jsx";
 
 export default function SideBar() {
     const [collapsed, setCollapsed] = useState(false)
 
     return (
         <div id="side-bar" className={`fixed overflow-hidden top-0 pr-4.5 transition-all w-custom`}>
-            <TopSideBar collapsed={collapsed} setCollapsed={setCollapsed}/>
+            <SideBarHeader collapsed={collapsed} setCollapsed={setCollapsed}/>
         </div>
     )
 }
