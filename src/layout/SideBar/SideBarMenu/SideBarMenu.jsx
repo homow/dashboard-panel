@@ -1,4 +1,4 @@
-import {Link} from "react-router-dom";
+import {NavLink} from "react-router-dom";
 
 function SideBarLinks(props) {
     const {title, dataLinks} = props.data;
@@ -12,7 +12,7 @@ function SideBarLinks(props) {
             <ul className={"mt-3"}>
                 {dataLinks && dataLinks.map(link => (
                     <li key={link.text}>
-                        <Link to={link.url} className="flex items-center pl-5.5 py-2 flex-row gap-2 w-full border">
+                        <NavLink to={link.url} className={({isActive}) => `flex items-center pl-5.5 py-2 flex-row gap-3 w-full font-light rounded-r-full ${isActive && "grad-links"}`}>
 
                             {/* icon */}
                             <span>
@@ -25,7 +25,7 @@ function SideBarLinks(props) {
                             <span>
                                 {link.text}
                             </span>
-                        </Link>
+                        </NavLink>
                     </li>
                 ))}
             </ul>

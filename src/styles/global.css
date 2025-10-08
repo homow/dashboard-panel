@@ -23,8 +23,6 @@
     --color-disable-txt: var(--color-zinc-400);
     --color-active: var(--color-zinc-400);
     --color-hover: #3A35410A;
-
-
 }
 
 .dark {
@@ -64,6 +62,9 @@
 }
 
 @layer components {
+    .grad-links {
+        @apply bg-gradient-to-r from-sky-500/45 to-sky-500 text-white;
+    }
 }
 
 /* media screens */
