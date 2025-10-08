@@ -22,6 +22,19 @@ export default function SvgDefs() {
 
             {/* <===== SideBarHeader =====> */}
 
+            {/* logo */}
+            <symbol id="logo-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 24" fill="none">
+                <path fillRule="evenodd" clipRule="evenodd" d="M1.47602 0.435408L6.7986 3.72203C7.08419 3.89838 7.25806 4.21016 7.25806 4.54592V19.5605C7.25806 19.901 7.07929 20.2164 6.78724 20.3913L1.46466 23.5777C1.00603 23.8523 0.411763 23.7029 0.137322 23.244C0.0474582 23.0938 0 22.922 0 22.7469V1.25929C0 0.724582 0.433273 0.291115 0.967742 0.291115C1.14727 0.291115 1.32325 0.341075 1.47602 0.435408Z" fill="#0ea5e9"/>
+                <path opacity="0.077704" fillRule="evenodd" clipRule="evenodd" d="M0 8.11655L7.25806 12.2802V16.3621L0 8.11655Z" fill="black"/>
+                <path opacity="0.077704" fillRule="evenodd" clipRule="evenodd" d="M0 8.11655L7.25806 12.1742V14.6678L0 8.11655Z" fill="black"/>
+                <path fillRule="evenodd" clipRule="evenodd" d="M28.5252 0.431595L23.2026 3.70721C22.9163 3.8834 22.7419 4.19558 22.7419 4.53185V19.5605C22.7419 19.901 22.9207 20.2164 23.2128 20.3913L28.5353 23.5777C28.994 23.8523 29.5882 23.7029 29.8627 23.2441C29.9525 23.0938 30 22.922 30 22.7469V1.25624C30 0.721531 29.5667 0.288063 29.0323 0.288063C28.8532 0.288063 28.6777 0.337749 28.5252 0.431595Z" fill="#0ea5e9"/>
+                <path opacity="0.077704" fillRule="evenodd" clipRule="evenodd" d="M30 8.11655L22.7419 12.2714V16.4853L30 8.11655Z" fill="black"/>
+                <path opacity="0.077704" fillRule="evenodd" clipRule="evenodd" d="M30 8.11655L22.7419 12.1706V14.791L30 8.11655Z" fill="black"/>
+                <path fillRule="evenodd" clipRule="evenodd" d="M1.47345 0.427468L15 8.72166V16.7091L0 8.11434V1.25294C0 0.718227 0.433273 0.28476 0.967742 0.28476C1.14624 0.28476 1.32126 0.33415 1.47345 0.427468Z" fill="#0ea5e9"/>
+                <path fillRule="evenodd" clipRule="evenodd" d="M1.47345 0.427468L15 8.72166V16.7091L0 8.11434V1.25294C0 0.718227 0.433273 0.28476 0.967742 0.28476C1.14624 0.28476 1.32126 0.33415 1.47345 0.427468Z" fill="#7dd3fc" fillOpacity="0.5"/>
+                <path fillRule="evenodd" clipRule="evenodd" d="M28.5266 0.427468L15 8.72166V16.7091L30 8.11434V1.25294C30 0.718227 29.5667 0.28476 29.0323 0.28476C28.8538 0.28476 28.6787 0.33415 28.5266 0.427468Z" fill="#0ea5e9"/>
+                <path fillRule="evenodd" clipRule="evenodd" d="M28.5266 0.427468L15 8.72166V16.7091L30 8.11434V1.25294C30 0.718227 29.5667 0.28476 29.0323 0.28476C28.8538 0.28476 28.6787 0.33415 28.5266 0.427468Z" fill="#7dd3fc" fillOpacity="0.5"/>
+            </symbol>
             {/* chevronDoubleRight */}
             <symbol id="chevronDoubleRight-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" d="m5.25 4.5 7.5 7.5-7.5 7.5m6-15 7.5 7.5-7.5 7.5" />

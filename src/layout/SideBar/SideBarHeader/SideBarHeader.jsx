@@ -16,7 +16,12 @@ export default function SideBarHeader({collapsed, setCollapsed}) {
 
             {/* brand and logo */}
             <div className={"pl-4 flex flex-row items-center gap-2"}>
-                <img className={"w-7.5"} src={`${logo}`} alt="Logo"/>
+                {/*<img className={"w-7.5"} src={`${logo}`} alt="Logo"/>*/}
+                <span>
+                    <svg className={"w-7.5 h-[23px]"}>
+                        <use href="#logo-icon"></use>
+                    </svg>
+                </span>
                 <strong className={`${collapsed && "hidden"}`}>MATERIO</strong>
             </div>
 

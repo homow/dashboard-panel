@@ -7,9 +7,9 @@ function SideBarLinks({collapsed, ...props}) {
         <div>
             {/* title links */}
             <div className={`h-4.5 flex items-center gap-4 ${collapsed && "px-2"}`}>
-                <div className={`w-10 h-px bg-gray-300 ${collapsed && "hidden"}`}></div>
+                <div className={`w-10 h-px bg-disable-txt ${collapsed && "hidden"}`}></div>
                 <p className={`text-sm text-disable-txt ${collapsed && "hidden"}`}>{title}</p>
-                <div className="flex-1 h-px bg-gray-300"></div>
+                <div className="flex-1 h-px bg-disable-txt"></div>
             </div>
 
             {/* list of links */}
