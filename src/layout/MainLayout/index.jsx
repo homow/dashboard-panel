@@ -1,5 +1,4 @@
-import React from 'react'
-import Footer from "./Footer/Footer.jsx";
+import Footer from "./Footer";
 
 export default function MainLayout({className}) {
     return (
