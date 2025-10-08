@@ -1,7 +1,7 @@
 import {Link} from "react-router-dom";
 
 function SideBarLinks(props) {
-    const {title, dataLinks} = props;
+    const {title, dataLinks} = props.data;
 
     return (
         <div>
@@ -35,7 +35,16 @@ function SideBarLinks(props) {
 
 export default function SideBarMenu() {
     const dataLinks = [
-        {}
+        {
+            title: "Dashboard", dataLinks: [
+                {text: "Analytics", url: "/analytics", icon: "analyze"}
+            ]
+        },
+        {
+            title: "Dashboard", dataLinks: [
+                {text: "Analytics", url: "/analytics", icon: "analyze"}
+            ]
+        }
     ];
 
     return (
