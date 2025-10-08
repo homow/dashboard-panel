@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import {useState, useEffect} from "react";
 
 export default function ThemeSection() {
     const [theme, setTheme] = useState("light");
@@ -23,7 +23,7 @@ export default function ThemeSection() {
             className="inline-block p-1 rounded-full cursor-pointer"
         >
             <svg className="size-6">
-                <use href={`#${theme === "dark" ? "sun-icon" : "moon-icon"}`} />
+                <use href={`#${theme === "dark" ? "sun-icon" : "moon-icon"}`}/>
             </svg>
         </div>
     );
