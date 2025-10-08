@@ -5,18 +5,26 @@ function SideBarLinks(props) {
 
     return (
         <div>
+            {/* title links */}
             <p className={"text-sm text-disable-txt"}>{title}</p>
 
+            {/* list of links */}
             <ul className={"mt-3"}>
                 {dataLinks && dataLinks.map(link => (
                     <li key={link.text}>
                         <Link to={link.url} className="flex flex-row gap-2 w-full">
+
+                            {/* icon */}
                             <span>
                                 <svg className={"size-4"}>
                                     <use href={`#${link.icon}-icon`}></use>
                                 </svg>
                             </span>
-                            {link.text}
+
+                            {/* text of link */}
+                            <span>
+                                {link.text}
+                            </span>
                         </Link>
                     </li>
                 ))}
@@ -26,6 +34,10 @@ function SideBarLinks(props) {
 }
 
 export default function SideBarMenu() {
+    const dataLinks = [
+        {}
+    ];
+
     return (
         <div>
 
