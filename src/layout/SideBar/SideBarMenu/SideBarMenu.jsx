@@ -16,7 +16,7 @@ function SideBarLinks(props) {
 
                             {/* icon */}
                             <span>
-                                <svg className={"size-4"}>
+                                <svg className={"size-4.5"}>
                                     <use href={`#${link.icon}-icon`}></use>
                                 </svg>
                             </span>
@@ -37,6 +37,7 @@ export default function SideBarMenu() {
     const dataLinks = [
         {
             title: "Dashboard", dataLinks: [
+                {text: "Home", url: "/", icon: "home"},
                 {text: "Analytics", url: "/analytics", icon: "analyze"}
             ]
         },
