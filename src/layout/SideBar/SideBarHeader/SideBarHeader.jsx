@@ -1,4 +1,4 @@
-import logo from "@/assets/left-side/Logo.webp"
+import logo from "@/assets/left-side/Logo.webp";
 
 export default function SideBarHeader({collapsed, setCollapsed}) {
 
@@ -9,7 +9,7 @@ export default function SideBarHeader({collapsed, setCollapsed}) {
         );
 
         setCollapsed(!collapsed)
-    }
+    };
 
     return (
         <div className={"relative flex items-center justify-between h-16"}>
@@ -29,5 +29,5 @@ export default function SideBarHeader({collapsed, setCollapsed}) {
                 </svg>
             </span>
         </div>
-    )
-}
+    );
+};
