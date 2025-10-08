@@ -63,7 +63,7 @@
 
 @layer components {
     .grad-links {
-        @apply bg-gradient-to-r from-sky-500/45 to-sky-500 text-white;
+        @apply shadow-md bg-gradient-to-r from-sky-500/45 to-sky-500 text-white;
     }
 }
 

@@ -1,28 +1,32 @@
 import {NavLink} from "react-router-dom";
 
-function SideBarLinks(props) {
+function SideBarLinks({collapsed, ...props}) {
     const {title, dataLinks} = props.data;
 
     return (
         <div>
             {/* title links */}
-            <p className={"text-sm text-disable-txt"}>{title}</p>
+            <div className={`h-4.5 flex items-center gap-4 ${collapsed && "px-2"}`}>
+                <div className={`w-10 h-px bg-gray-300 ${collapsed && "hidden"}`}></div>
+                <p className={`text-sm text-disable-txt ${collapsed && "hidden"}`}>{title}</p>
+                <div className="flex-1 h-px bg-gray-300"></div>
+            </div>
 
             {/* list of links */}
-            <ul className={"mt-3"}>
+            <ul className={"mt-3 space-y-1.5"}>
                 {dataLinks && dataLinks.map(link => (
                     <li key={link.text}>
-                        <NavLink to={link.url} className={({isActive}) => `flex items-center pl-5.5 py-2 flex-row gap-3 w-full font-light rounded-r-full ${isActive && "grad-links"}`}>
+                        <NavLink to={link.url} className={({isActive}) => `h-10.5 flex items-center pl-5.5 py-2 flex-row gap-3 w-full font-light rounded-r-full ${isActive && "grad-links"}`}>
 
                             {/* icon */}
                             <span>
-                                <svg className={"size-4.5"}>
+                                <svg className={"size-5"}>
                                     <use href={`#${link.icon}-icon`}></use>
                                 </svg>
                             </span>
 
                             {/* text of link */}
-                            <span>
+                            <span className={`${collapsed && "hidden"}`}>
                                 {link.text}
                             </span>
                         </NavLink>
@@ -33,7 +37,7 @@ function SideBarLinks(props) {
     )
 }
 
-export default function SideBarMenu() {
+export default function SideBarMenu({collapsed}) {
     const dataLinks = [
         {
             title: "Dashboard", dataLinks: [
@@ -51,9 +55,9 @@ export default function SideBarMenu() {
     ];
 
     return (
-        <div>
+        <div className={"space-y-5 pb-2"}>
             {dataLinks.length > 0 && dataLinks.map(link => (
-                <SideBarLinks key={link.title} data={link}/>
+                <SideBarLinks key={link.title} data={link} collapsed={collapsed}/>
             ))}
         </div>
     )

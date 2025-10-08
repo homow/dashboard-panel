@@ -5,7 +5,7 @@ export default function SideBarHeader({collapsed, setCollapsed}) {
     const toggleCollapse = () => {
         document.documentElement.style.setProperty(
             "--spacing-custom",
-            !collapsed ? "70px" : "260px"
+            !collapsed ? "80px" : "260px"
         );
 
         setCollapsed(!collapsed)
