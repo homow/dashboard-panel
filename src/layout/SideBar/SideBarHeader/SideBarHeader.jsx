@@ -1,5 +1,3 @@
-import logo from "@/assets/left-side/Logo.webp";
-
 export default function SideBarHeader({collapsed, setCollapsed}) {
 
     const toggleCollapse = () => {
