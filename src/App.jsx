@@ -14,7 +14,7 @@ export default function App() {
 
             <Overlay flag={mobileNavOpen} setFlag={setMobileNavOpen}/>
 
-            <SideBar mobileNavOpen={mobileNavOpen}/>
+            <SideBar mobileNavOpen={mobileNavOpen} setMobileNavOpen={setMobileNavOpen}/>
 
             <div className={"transition-all ml-custom flex-1 px-6 flex flex-col"}>
                 <TopBar mobileNavOpen={mobileNavOpen} setMobileNavOpen={setMobileNavOpen}/>

@@ -1,14 +1,14 @@
 function FooterCopyright() {
     return (
         <div>
-            © 2025, Developed with ❤️ by <a target="_blank" href="https://card.homow.ir" className={"text-sky-500"}>homow</a>
+            Developed with ❤️ by <a target="_blank" href="https://card.homow.ir" className={"text-sky-500"}>homow</a>
         </div>
     )
 }
 
 function FooterLinks() {
     return (
-        <div className={"flex flex-row items-center gap-4"}>
+        <div className={"flex flex-row flex-wrap items-center gap-2 xs:gap-4"}>
             <a target="_blank" href="https://github.com/homow" className={"text-sky-500"}>GitHub</a>
             <a target="_blank" href="https://homow.ir" className={"text-sky-500"}>Website</a>
             <a target="_blank" href="https://youtube.com/@homow_dev" className={"text-sky-500"}>YouTube</a>
@@ -19,7 +19,7 @@ function FooterLinks() {
 
 export default function Footer() {
     return (
-        <div className={`fixed bottom-0 right-0 left-0 w-full flex flex-row justify-between py-3 px-6 bg-primary-bg text-sm md:pl-[calc(var(--spacing-custom)+24px)] 2xl:text-base`}>
+        <div className={`flex flex-col gap-6 w-full justify-between py-3 px-6 bg-primary-bg text-[13px] xs:text-sm bottom-0 right-0 left-0 text-center md:flex-row md:text-start md:pl-[calc(var(--spacing-custom)+24px)] md:fixed 2xl:text-base`}>
             <FooterCopyright/>
             <FooterLinks/>
         </div>
