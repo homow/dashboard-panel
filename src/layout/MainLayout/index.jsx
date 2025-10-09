@@ -1,5 +1,5 @@
 import AppRoutes from "@/routes/AppRoutes.jsx";
-import Footer from "./Footer/Footer.jsx";
+import Footer from "./Footer.jsx";
 
 export default function MainLayout({className}) {
     return (
