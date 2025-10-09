@@ -27,6 +27,10 @@
     --color-hover: #3A35410A;
 }
 
+@utility mobile-nav {
+    @apply z-30 w-57 bg-primary-bg bottom-0 overflow-auto;
+}
+
 .dark {
     --color-primary-bg: var(--color-gray-900);
     --color-main-bg: var(--color-gray-800);

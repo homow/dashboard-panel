@@ -3,12 +3,12 @@ import Account from "@/layout/TopBar/Account.jsx";
 import Notification from "@/layout/TopBar/Notification.jsx";
 import SearchBar from "@/layout/TopBar/SearchBar.jsx";
 
-export default function TopBar() {
+export default function TopBar({setMobileNavOpen}) {
     return (
         <div className={"flex items-center justify-between sticky top-0 h-16"}>
 
             {/* left top bar */}
-            <SearchBar/>
+            <SearchBar setMobileNavOpen={setMobileNavOpen}/>
 
             {/* right top bar */}
             <div className={"flex items-center justify-between gap-4 py-3"}>

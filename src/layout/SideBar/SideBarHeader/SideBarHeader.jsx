@@ -29,12 +29,6 @@ export default function SideBarHeader({collapsed, setCollapsed}) {
                     <use href="#chevronDoubleRight-icon"></use>
                 </svg>
             </span>
-
-            <span className={"md:hidden"}>
-                <svg>
-                    <use href="#bars-icon"></use>
-                </svg>
-            </span>
         </div>
     );
 };
