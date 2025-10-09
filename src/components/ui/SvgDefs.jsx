@@ -22,6 +22,10 @@ export default function SvgDefs() {
 
             {/* <===== SideBarHeader =====> */}
 
+            {/* bars */}
+            <symbol id="bars-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25H12" />
+            </symbol>
             {/* logo */}
             <symbol id="logo-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 24" fill="none">
                 <path fillRule="evenodd" clipRule="evenodd" d="M1.47602 0.435408L6.7986 3.72203C7.08419 3.89838 7.25806 4.21016 7.25806 4.54592V19.5605C7.25806 19.901 7.07929 20.2164 6.78724 20.3913L1.46466 23.5777C1.00603 23.8523 0.411763 23.7029 0.137322 23.244C0.0474582 23.0938 0 22.922 0 22.7469V1.25929C0 0.724582 0.433273 0.291115 0.967742 0.291115C1.14727 0.291115 1.32325 0.341075 1.47602 0.435408Z" fill="#0ea5e9"/>

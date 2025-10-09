@@ -13,7 +13,6 @@ export default function SideBarHeader({collapsed, setCollapsed}) {
 
             {/* brand and logo */}
             <div className={"pl-4 flex flex-row items-center gap-2"}>
-                {/*<img className={"w-7.5"} src={`${logo}`} alt="Logo"/>*/}
                 <span>
                     <svg className={"w-7.5 h-[23px]"}>
                         <use href="#logo-icon"></use>
@@ -24,10 +23,16 @@ export default function SideBarHeader({collapsed, setCollapsed}) {
 
             <span
                 onClick={toggleCollapse}
-                className={`absolute -right-5.5 cursor-pointer transition-all duration-500 ${collapsed && "-rotate-180"}`}
+                className={`hidden md:inline absolute -right-5.5 cursor-pointer transition-all duration-500 ${collapsed && "-rotate-180"}`}
             >
                 <svg className={"size-5"}>
                     <use href="#chevronDoubleRight-icon"></use>
+                </svg>
+            </span>
+
+            <span className={"md:hidden"}>
+                <svg>
+                    <use href="#bars-icon"></use>
                 </svg>
             </span>
         </div>
