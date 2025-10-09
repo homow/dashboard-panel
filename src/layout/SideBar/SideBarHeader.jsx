@@ -12,7 +12,7 @@ export default function SideBarHeader({collapsed, setCollapsed}) {
         <div className={"relative flex items-center justify-between h-16"}>
 
             {/* brand and logo */}
-            <a target="_blank" href="https://homow.ir" className={"pl-4 flex flex-row items-center gap-2"}>
+            <a target="_blank" href="https://homow.ir" className={"pl-4 flex flex-row items-center gap-2 hover:opacity-100"}>
                 <span>
                     <svg className={"w-7.5 h-[23px]"}>
                         <use href="#logo-icon"></use>
