@@ -5,7 +5,6 @@ export default function SideBarHeader({collapsed, setCollapsed}) {
             "--spacing-custom",
             !collapsed ? "80px" : "260px"
         );
-
         setCollapsed(!collapsed)
     };
 
@@ -20,7 +19,7 @@ export default function SideBarHeader({collapsed, setCollapsed}) {
                         <use href="#logo-icon"></use>
                     </svg>
                 </span>
-                <strong className={`${collapsed && "hidden"}`}>MATERIO</strong>
+                <strong className={`${collapsed && "hidden"}`}>MATERIAL</strong>
             </div>
 
             <span

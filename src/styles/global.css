@@ -1,15 +1,17 @@
 @import "./font-face.css";
 @import "tailwindcss";
+
 @custom-variant dark (&:where(.dark, .dark *));
 
 @theme {
     /* custom size */
-    --spacing-custom: 260px;
+    --spacing-custom: 0;
 
     /* break-points */
     --breakpoint-xx: 21rem;
     --breakpoint-xs: 24.375rem;
     --breakpoint-sm: 36rem;
+    --breakpoint-md: 56rem;
     --breakpoint-2xl: 90rem;
 
     /* fonts */
@@ -38,39 +40,45 @@
     html {
         @apply transition-all scroll-smooth;
     }
+
     body {
         @apply font-Inter font-normal leading-[150%] text-base tracking-wide bg-primary-bg text-primary-txt;
     }
+
     h1, h2, h3 {
         @apply font-bold;
     }
+
     h4, h5, h6 {
         @apply font-medium;
     }
+
     h1 {
         @apply text-3xl md:text-5xl xl:text-6xl leading-[140%];
     }
+
     h2 {
         @apply text-2xl md:text-4xl lg:text-5xl;
     }
+
     h3 {
         @apply text-xl md:text-2xl lg:text-3xl;
     }
+
     a {
         @apply hover:opacity-70 active:opacity-70 transition-all;
+    }
+
+    /* <=== media screens ===> */
+    @media (min-width: 900px) {
+        :root {
+            --spacing-custom: 260px;
+        }
     }
 }
 
 @layer components {
     .grad-links {
         @apply shadow-md bg-gradient-to-r from-sky-500/45 to-sky-500 text-white;
-    }
-}
-
-/* media screens */
-
-@media only screen and (min-width: 1000px) {
-    @theme {
-
     }
 }
