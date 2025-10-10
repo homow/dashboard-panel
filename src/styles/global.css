@@ -25,6 +25,9 @@
     --color-disable-txt: var(--color-zinc-400);
     --color-active: var(--color-zinc-400);
     --color-hover: #3A35410A;
+    --color-shadow: #3A35411A;
+
+    --shadow-custom: 0px 2px 10px 0px var(--color-shadow);
 }
 
 @utility mobile-nav {
@@ -38,6 +41,7 @@
     --color-secondary-txt: #E7E3FCDE;
     --color-disable-txt: #E7E3FC61;
     --color-grey-10: #1A1A1A;
+    --color-shadow: #1311201A;
 }
 
 @layer base {
