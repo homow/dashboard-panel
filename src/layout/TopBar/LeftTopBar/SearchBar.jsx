@@ -1,21 +1,9 @@
-export default function SearchBar({setMobileNavOpen}) {
+export default function SearchBar({className}) {
     return (
         <div>
-            <span className={"hidden md:block"}>
+            <span className={`${className}`}>
                 <svg className={"size-6"}>
                     <use href="#search-icon"></use>
-                </svg>
-            </span>
-
-            <span
-                onClick={
-                    () => {
-                        setMobileNavOpen(true);
-                    }}
-                className={"cursor-pointer md:hidden"}
-            >
-                <svg className={"size-6"}>
-                    <use href="#bars-icon"></use>
                 </svg>
             </span>
         </div>
