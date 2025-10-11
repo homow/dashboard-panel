@@ -6,17 +6,25 @@ function Section3DImages({data}) {
     const {img, title, number, profit, text, bg, color} = data;
 
     return (
-        <div className={`relative w-full space-y-5 bg-main-bg rounded-md shadow-custom p-5`}>
-            <img className={`absolute right-0 -bottom-5`} src={img} alt="3d img"/>
+        <div className={`relative w-full main-components`}>
+            <img className={`absolute right-0 bottom-0`} src={img} alt="3d img"/>
 
             <p className={"font-medium"}>{title}</p>
 
-            <div className={"space-x-1"}>
+            <div className={"space-x-1 mb-3 mt-6.5"}>
                 <span className={"font-medium text-lg md:text-xl 2xl:text-2xl"}>{number}</span>
                 <span className={"text-xs text-green-500"}>{profit}</span>
             </div>
 
-            <span className={`p-1.5 text-xs rounded-full ${bg} ${color}`}>{text}</span>
+            <span className={`px-1.5 py-0.5 text-xs rounded-full ${bg} ${color}`}>{text}</span>
+        </div>
+    )
+}
+
+function TransActions() {
+    return (
+        <div className={"main-components"}>
+
         </div>
     )
 }
@@ -28,7 +36,7 @@ export default function TopSection() {
     ];
 
     return (
-        <section id="top-section" className={"grid grid-cols-2 gap-6"}>
+        <section id="top-section" className={"grid grid-cols-1 gap-6 sm:grid-cols-2"}>
             <Section3DImages data={data[0]}/>
             <Section3DImages data={data[1]}/>
         </section>
