@@ -37,7 +37,6 @@ function TransActionsIconBox({data, className}) {
 
                 <p className={"font-medium text-lg 2xl:text-xl"}>{profit}</p>
             </div>
-
         </div>
     )
 }
@@ -75,7 +74,7 @@ export default function TopSection() {
     return (
         <section id="top-section" className={"grid grid-cols-1 gap-6 @lg/main:grid-cols-2 @4xl/main:grid-cols-11"}>
             <Section3DImages className={"@4xl/main:col-span-3"} data={data[0]}/>
-            <Section3DImages className={"@4xl/main:col-span-3"} data={data[1]}/>
+            <Section3DImages className={"@max-lg/main:mt-2 @4xl/main:col-span-3"} data={data[1]}/>
             <TransActions className={"@lg/main:col-span-2 @4xl/main:col-span-5"}/>
         </section>
     )
