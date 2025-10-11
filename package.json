@@ -15,10 +15,12 @@
     "publish-all": "npm run update-main && npm run build-deploy"
   },
   "dependencies": {
+    "clsx": "^2.1.1",
     "react": "^19.1.1",
     "react-dom": "^19.1.1",
     "react-router-dom": "^7.9.3",
-    "recharts": "^3.2.1"
+    "recharts": "^3.2.1",
+    "tailwind-merge": "^3.3.1"
   },
   "devDependencies": {
     "@eslint/js": "^9.36.0",

@@ -1,8 +1,7 @@
-export default function SvgDefs() {
+function TopBarIcons() {
     return (
-        <svg className={"hidden"}>
+        <>
             {/* <===== TopBar =====> */}
-
             {/* sun */}
             <symbol id={"sun-icon"} xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M12 3v2.25m6.364.386-1.591 1.591M21 12h-2.25m-.386 6.364-1.591-1.591M12 18.75V21m-4.773-4.227-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0Z" />
@@ -19,9 +18,14 @@ export default function SvgDefs() {
             <symbol id="notification-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M14.857 17.082a23.848 23.848 0 0 0 5.454-1.31A8.967 8.967 0 0 1 18 9.75V9A6 6 0 0 0 6 9v.75a8.967 8.967 0 0 1-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 0 1-5.714 0m5.714 0a3 3 0 1 1-5.714 0" />
             </symbol>
+        </>
+    )
+}
 
+function SideBarIcons() {
+    return (
+        <>
             {/* <===== SideBarHeader =====> */}
-
             {/* bars */}
             <symbol id="bars-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25H12" />
@@ -66,9 +70,14 @@ export default function SvgDefs() {
             <symbol id="lock-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M16.5 10.5V6.75a4.5 4.5 0 1 0-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 0 0 2.25-2.25v-6.75a2.25 2.25 0 0 0-2.25-2.25H6.75a2.25 2.25 0 0 0-2.25 2.25v6.75a2.25 2.25 0 0 0 2.25 2.25Z" />
             </symbol>
+        </>
+    )
+}
 
+function HomeIcons() {
+    return (
+        <>
             {/* <=== Home Page ===> */}
-
             {/* more */}
             <symbol id="more-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 4 16" fill="none">
                 <path d="M2 4C3.1 4 4 3.1 4 2C4 0.9 3.1 0 2 0C0.9 0 0 0.9 0 2C0 3.1 0.9 4 2 4ZM2 6C0.9 6 0 6.9 0 8C0 9.1 0.9 10 2 10C3.1 10 4 9.1 4 8C4 6.9 3.1 6 2 6ZM2 12C0.9 12 0 12.9 0 14C0 15.1 0.9 16 2 16C3.1 16 4 15.1 4 14C4 12.9 3.1 12 2 12Z" fill="var(--color-secondary-txt)" fillOpacity="0.54"/>
@@ -85,19 +94,37 @@ export default function SvgDefs() {
             <symbol id="pcAndPhone-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 16" fill="none">
                 <path d="M4.5 2H22.5V0H4.5C3.4 0 2.5 0.9 2.5 2V13H0.5V16H14.5V13H4.5V2ZM23.5 4H17.5C16.95 4 16.5 4.45 16.5 5V15C16.5 15.55 16.95 16 17.5 16H23.5C24.05 16 24.5 15.55 24.5 15V5C24.5 4.45 24.05 4 23.5 4ZM22.5 13H18.5V6H22.5V13Z" fill="white"/>
             </symbol>
-            {/* email */}
-            {/* email */}
-            {/* email */}
-            {/* email */}
-            {/* email */}
-            {/* email */}
-            {/* email */}
-            {/* email */}
-            {/* email */}
-            {/* email */}
-            {/* email */}
-            {/* email */}
-            {/* email */}
+            {/* circleTick */}
+            <symbol id="circleTick-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+            </symbol>
+            {/* star */}
+            <symbol id="star-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z" />
+            </symbol>
+            {/* horizontalMore */}
+            <symbol id="horizontalMore-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M6.75 12a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0ZM12.75 12a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0ZM18.75 12a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" />
+            </symbol>
+            {/* clock */}
+            <symbol id="clock-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+            </symbol>
+            {/* location */}
+            <symbol id="location-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+                <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z" />
+            </symbol>
+        </>
+    )
+}
+
+export default function SvgDefs() {
+    return (
+        <svg className={"hidden"}>
+            <TopBarIcons/>
+            <SideBarIcons/>
+            <HomeIcons/>
         </svg>
     )
 }
