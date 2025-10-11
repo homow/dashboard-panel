@@ -2,11 +2,11 @@ import img1 from "@img/home/3d-image-1.webp"
 import img2 from "@img/home/3d-image-2.webp"
 
 // section 3D image profit
-function Section3DImages({data}) {
+function Section3DImages({data, className}) {
     const {img, title, number, profit, text, bg, color} = data;
 
     return (
-        <div className={`relative w-full main-components`}>
+        <div className={`relative w-full main-components ${className}`}>
             <img className={`absolute right-0 bottom-0`} src={img} alt="3d img"/>
 
             <p className={"font-medium"}>{title}</p>
@@ -55,7 +55,7 @@ function TransActions({className}) {
                 </span>
             </div>
 
-            <div className={"flex flex-row items-center pb-3.5 gap-10 @xl:gap-20"}>
+            <div className={"flex flex-row items-center pb-3.5 gap-10 @xl:gap-20 @2xl:gap-30"}>
                 <TransActionsIconBox data={{text: "Sales", color: "bg-violet-500", profit: "245K", icon: "profitSale"}}/>
 
                 <TransActionsIconBox data={{text: "Customers", color: "bg-green-500", profit: "12.5K", icon: "userOutline"}}/>
@@ -73,10 +73,10 @@ export default function TopSection() {
     ];
 
     return (
-        <section id="top-section" className={"grid grid-cols-1 gap-6 @lg:grid-cols-2"}>
-            <Section3DImages data={data[0]}/>
-            <Section3DImages data={data[1]}/>
-            <TransActions className={"@lg:col-span-2"}/>
+        <section id="top-section" className={"grid grid-cols-1 gap-6 @lg/main:grid-cols-2 @4xl/main:grid-cols-11"}>
+            <Section3DImages className={"@4xl/main:col-span-3"} data={data[0]}/>
+            <Section3DImages className={"@4xl/main:col-span-3"} data={data[1]}/>
+            <TransActions className={"@lg/main:col-span-2 @4xl/main:col-span-5"}/>
         </section>
     )
 }
