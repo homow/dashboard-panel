@@ -71,7 +71,7 @@ export default function TopSection() {
     ];
 
     return (
-        <section id="top-section" className={"grid grid-cols-1 gap-6 @lg/main:grid-cols-2 @4xl/main:grid-cols-11"}>
+        <section id="top-section" className={"grid grid-cols-1 gap-6 @lg/main:grid-cols-2 @4xl/main:grid-cols-11 mt-12"}>
 
             {/* first 3d section image */}
             <Section3DImages className={"@4xl/main:col-span-3"} data={data[0]}/>

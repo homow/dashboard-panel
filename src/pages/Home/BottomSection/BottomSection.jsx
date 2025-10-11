@@ -2,7 +2,7 @@ import DevMeetUp from "./DevMeetUp.jsx";
 
 export default function BottomSection() {
     return (
-        <div>
+        <div className={""}>
             <DevMeetUp/>
         </div>
     )
