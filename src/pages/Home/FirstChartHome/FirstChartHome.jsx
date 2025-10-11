@@ -27,10 +27,10 @@ export default function FirstChartHome({className}) {
     };
 
     return (
-        <div className={`w-full h-64 p-4 rounded-md shadow-custom bg-gradient-to-br from-primary-bg via-main-bg to-primary-bg  ${className}`}>
+        <div className={`w-full h-70 p-4 rounded-md shadow-custom bg-gradient-to-br from-primary-bg via-main-bg to-primary-bg  ${className}`}>
             <h2 className="text-lg font-semibold mb-3">Weekly Activity</h2>
 
-            <ResponsiveContainer width="100%" height="100%">
+            <ResponsiveContainer width="98%" height="100%">
                 <AreaChart data={data}>
                     <ChartGradientDefs/>
 
