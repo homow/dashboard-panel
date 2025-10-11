@@ -2,8 +2,8 @@ import DevMeetUp from "./DevMeetUp.jsx";
 
 export default function BottomSection() {
     return (
-        <div className={""}>
+        <section className={""}>
             <DevMeetUp/>
-        </div>
+        </section>
     )
 }

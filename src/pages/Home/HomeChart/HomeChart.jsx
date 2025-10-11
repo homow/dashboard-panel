@@ -11,7 +11,7 @@ function ChartGradientDefs() {
     );
 }
 
-export default function HomeChart({className}) {
+export default function HomeChart() {
     const data = [
         {name: "Mon", value: 45},
         {name: "Tue", value: 80},
@@ -27,7 +27,7 @@ export default function HomeChart({className}) {
     };
 
     return (
-        <div className={`w-full h-56 p-4 rounded-md shadow-custom bg-gradient-to-br from-primary-bg via-main-bg to-primary-bg @2xl/main:h-70   ${className}`}>
+        <section className={`w-full h-56 p-4 rounded-md shadow-custom bg-gradient-to-br from-primary-bg via-main-bg to-primary-bg @2xl/main:h-70`}>
             <h2 className="text-lg font-semibold mb-3">Weekly Activity</h2>
 
             <ResponsiveContainer width="98%" height="100%">
@@ -57,6 +57,6 @@ export default function HomeChart({className}) {
                     />
                 </AreaChart>
             </ResponsiveContainer>
-        </div>
+        </section>
     );
 }
