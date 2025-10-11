@@ -1,18 +1,12 @@
-import {useEffect, useRef} from "react";
 import img1 from "@img/home/3d-image-1.webp"
 import img2 from "@img/home/3d-image-2.webp"
 
 // section 3D image profit
 function Section3DImages({data, className}) {
-    const ref = useRef(null);
     const {img, title, number, profit, text, bg, color} = data;
 
-    useEffect(() => {
-        console.log(ref.current);
-    })
-
     return (
-        <div ref={ref} className={`relative w-full main-components ${className}`}>
+        <div className={`relative w-full main-components ${className}`}>
             <img className={`absolute right-0 bottom-0`} src={img} alt="3d img"/>
             <p className={"font-medium"}>{title}</p>
 
@@ -78,8 +72,14 @@ export default function TopSection() {
 
     return (
         <section id="top-section" className={"grid grid-cols-1 gap-6 @lg/main:grid-cols-2 @4xl/main:grid-cols-11"}>
+
+            {/* first 3d section image */}
             <Section3DImages className={"@4xl/main:col-span-3"} data={data[0]}/>
+
+            {/* second 3d section image */}
             <Section3DImages className={"@max-lg/main:mt-2 @4xl/main:col-span-3"} data={data[1]}/>
+
+            {/* TransAction Section */}
             <TransActions className={"@lg/main:col-span-2 @4xl/main:col-span-5"}/>
         </section>
     )
