@@ -2,7 +2,7 @@ import {useState} from "react";
 import TopBar from "@/layout/TopBar";
 import MainLayout from "@/layout/MainLayout";
 import SideBar from "@/layout/SideBar";
-import Footer from "@/layout/MainLayout/Footer.jsx";
+import Footer from "@/layout/Footer";
 import SvgDefs from "@components/ui/SvgDefs.jsx";
 import Overlay from "@components/ui/Overlay.jsx";
 
@@ -21,7 +21,7 @@ export default function App() {
             {/* side bar menu and links */}
             <SideBar mobileNavOpen={mobileNavOpen} setMobileNavOpen={setMobileNavOpen}/>
 
-            <section className={"transition-all ml-custom flex-1 px-2 sm:px-6 flex flex-col"}>
+            <section className={"transition-all ml-custom flex-1 px-3 sm:px-6 flex flex-col"}>
 
                 {/* top bar | header */}
                 <TopBar mobileNavOpen={mobileNavOpen} setMobileNavOpen={setMobileNavOpen}/>
