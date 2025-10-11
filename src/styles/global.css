@@ -78,6 +78,12 @@
         @apply hover:opacity-70 active:opacity-70 transition-all;
     }
 
+    .recharts-wrapper:focus,
+    .recharts-surface:focus,
+    .recharts-responsive-container:focus {
+        @apply outline-none;
+    }
+
     /* <=== media screens ===> */
     @media (min-width: 900px) {
         :root {
