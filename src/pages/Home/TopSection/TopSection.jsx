@@ -1,14 +1,19 @@
+import {useEffect, useRef} from "react";
 import img1 from "@img/home/3d-image-1.webp"
 import img2 from "@img/home/3d-image-2.webp"
 
 // section 3D image profit
 function Section3DImages({data, className}) {
+    const ref = useRef(null);
     const {img, title, number, profit, text, bg, color} = data;
 
-    return (
-        <div className={`relative w-full main-components ${className}`}>
-            <img className={`absolute right-0 bottom-0`} src={img} alt="3d img"/>
+    useEffect(() => {
+        console.log(ref.current);
+    })
 
+    return (
+        <div ref={ref} className={`relative w-full main-components ${className}`}>
+            <img className={`absolute right-0 bottom-0`} src={img} alt="3d img"/>
             <p className={"font-medium"}>{title}</p>
 
             <div className={"space-x-1 mb-3 mt-6.5"}>
@@ -27,7 +32,7 @@ function TransActionsIconBox({data, className}) {
     return (
         <div className={`flex flex-row items-center gap-3 ${className}`}>
             <span className={`rounded-md p-2 ${color} text-white shadow-md`}>
-                <svg className={"text-white size-4"}>
+                <svg className={"text-white size-4.5"}>
                     <use href={`#${icon}-icon`}></use>
                 </svg>
             </span>
