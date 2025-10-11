@@ -15,14 +15,6 @@
     --breakpoint-2xl: 91rem;
     --breakpoint-3xl: 105rem;
 
-    /* container break-points */
-    --container-xx: 21rem;
-    --container-xs: 24.375rem;
-    --container-sm: 36rem;
-    --container-md: 56rem;
-    --container-2xl: 91rem;
-    --container-3xl: 105rem;
-
     /* fonts */
     --font-Inter: "Inter", "Helvetica Neue", Helvetica, Arial, sans-serif, monospace;
 

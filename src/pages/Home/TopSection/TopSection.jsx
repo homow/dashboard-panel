@@ -26,7 +26,7 @@ function TransActionsIconBox({data, className}) {
 
     return (
         <div className={`flex flex-row items-center gap-3 ${className}`}>
-            <span className={`rounded-md p-2 ${color} text-white shadow-sm`}>
+            <span className={`rounded-md p-2 ${color} text-white shadow-md`}>
                 <svg className={"text-white size-4"}>
                     <use href={`#${icon}-icon`}></use>
                 </svg>
@@ -42,9 +42,9 @@ function TransActionsIconBox({data, className}) {
     )
 }
 
-function TransActions() {
+function TransActions({className}) {
     return (
-        <div className={"main-components sm:col-span-2 xl:col-span-1"}>
+        <div className={`@container main-components ${className}`}>
             <div className={"flex flex-row items-center justify-between mb-7"}>
                 <p className={"text-lg md:text-xl font-medium"}>Transactions</p>
 
@@ -55,12 +55,12 @@ function TransActions() {
                 </span>
             </div>
 
-            <div className={"flex flex-row items-center pb-3.5 gap-10 @xs:gap-5 @sm:gap-20"}>
+            <div className={"flex flex-row items-center pb-3.5 gap-10 @xl:gap-20"}>
                 <TransActionsIconBox data={{text: "Sales", color: "bg-violet-500", profit: "245K", icon: "profitSale"}}/>
 
                 <TransActionsIconBox data={{text: "Customers", color: "bg-green-500", profit: "12.5K", icon: "userOutline"}}/>
 
-                <TransActionsIconBox className={"hidden @xs:flex"} data={{text: "Product", color: "bg-amber-500", profit: "1.54K", icon: "pcAndPhone"}}/>
+                <TransActionsIconBox className={"hidden @sm:flex"} data={{text: "Product", color: "bg-amber-500", profit: "1.54K", icon: "pcAndPhone"}}/>
             </div>
         </div>
     )
@@ -73,10 +73,10 @@ export default function TopSection() {
     ];
 
     return (
-        <section id="top-section" className={"grid grid-cols-1 gap-6 sm:grid-cols-2 xl:grid-cols-3"}>
+        <section id="top-section" className={"grid grid-cols-1 gap-6 @lg:grid-cols-2"}>
             <Section3DImages data={data[0]}/>
             <Section3DImages data={data[1]}/>
-            <TransActions/>
+            <TransActions className={"@lg:col-span-2"}/>
         </section>
     )
 }
