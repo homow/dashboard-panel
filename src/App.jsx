@@ -20,13 +20,13 @@ export default function App() {
             {/* side bar menu and links */}
             <SideBar mobileNavOpen={mobileNavOpen} setMobileNavOpen={setMobileNavOpen}/>
 
-            <section id="base-content" className={"transition-all ml-custom flex-1 px-6 flex flex-col"}>
+            <section id="base-content" className={"transition-all ml-custom flex-1 px-2 sm:px-6 flex flex-col"}>
 
                 {/* top bar | header */}
                 <TopBar mobileNavOpen={mobileNavOpen} setMobileNavOpen={setMobileNavOpen}/>
 
                 {/* main content */}
-                <MainLayout className={""}/>
+                <MainLayout/>
             </section>
         </section>
     )

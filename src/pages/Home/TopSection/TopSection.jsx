@@ -21,10 +21,47 @@ function Section3DImages({data}) {
     )
 }
 
+function TransActionsIconBox({data, className}) {
+    const {text, icon, color, profit} = data
+
+    return (
+        <div className={`flex flex-row items-center gap-3 ${className}`}>
+            <span className={`rounded-md p-2 ${color} text-white shadow-sm`}>
+                <svg className={"text-white size-4"}>
+                    <use href={`#${icon}-icon`}></use>
+                </svg>
+            </span>
+
+            <div>
+                <p className={"text-xs text-secondary-txt"}>{text}</p>
+
+                <p className={"font-medium text-lg 2xl:text-xl"}>{profit}</p>
+            </div>
+
+        </div>
+    )
+}
+
 function TransActions() {
     return (
-        <div className={"main-components"}>
+        <div className={"main-components sm:col-span-2 xl:col-span-1"}>
+            <div className={"flex flex-row items-center justify-between mb-7"}>
+                <p className={"text-lg md:text-xl font-medium"}>Transactions</p>
 
+                <span>
+                    <svg className={"size-4"}>
+                        <use href="#more-icon"></use>
+                    </svg>
+                </span>
+            </div>
+
+            <div className={"flex flex-row items-center pb-3.5 gap-10 @xs:gap-5 @sm:gap-20"}>
+                <TransActionsIconBox data={{text: "Sales", color: "bg-violet-500", profit: "245K", icon: "profitSale"}}/>
+
+                <TransActionsIconBox data={{text: "Customers", color: "bg-green-500", profit: "12.5K", icon: "userOutline"}}/>
+
+                <TransActionsIconBox className={"hidden @xs:flex"} data={{text: "Product", color: "bg-amber-500", profit: "1.54K", icon: "pcAndPhone"}}/>
+            </div>
         </div>
     )
 }
@@ -36,9 +73,10 @@ export default function TopSection() {
     ];
 
     return (
-        <section id="top-section" className={"grid grid-cols-1 gap-6 sm:grid-cols-2"}>
+        <section id="top-section" className={"grid grid-cols-1 gap-6 sm:grid-cols-2 xl:grid-cols-3"}>
             <Section3DImages data={data[0]}/>
             <Section3DImages data={data[1]}/>
+            <TransActions/>
         </section>
     )
 }
