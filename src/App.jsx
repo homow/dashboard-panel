@@ -9,7 +9,7 @@ export default function App() {
     const [mobileNavOpen, setMobileNavOpen] = useState(false)
 
     return (
-        <div id="app-container" className="flex flex-row min-h-screen">
+        <section id="app-container" className="flex flex-row min-h-screen">
 
             {/* svg icons */}
             <SvgDefs/>
@@ -20,14 +20,14 @@ export default function App() {
             {/* side bar menu and links */}
             <SideBar mobileNavOpen={mobileNavOpen} setMobileNavOpen={setMobileNavOpen}/>
 
-            <div className={"transition-all ml-custom flex-1 px-6 flex flex-col"}>
+            <section id="base-content" className={"transition-all ml-custom flex-1 px-6 flex flex-col"}>
 
                 {/* top bar | header */}
                 <TopBar mobileNavOpen={mobileNavOpen} setMobileNavOpen={setMobileNavOpen}/>
 
                 {/* main content */}
                 <MainLayout className={""}/>
-            </div>
-        </div>
+            </section>
+        </section>
     )
 }
