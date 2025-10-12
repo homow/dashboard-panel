@@ -24,5 +24,16 @@ export default defineConfig(({mode}) => {
             react(),
             tailwindcss(),
         ],
+        build: {
+            rollupOptions: {
+                output: {
+                    manualChunks: {
+                        react: ["react", "react-dom", "react-router-dom"],
+                        charts: ["recharts"],
+                        ui: ["clsx", "tailwind-merge"],
+                    }
+                }
+            }
+        }
     }
 })
