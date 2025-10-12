@@ -11,7 +11,7 @@ function ChartGradientDefs() {
     );
 }
 
-export default function HomeChart() {
+export default function SalaryChart() {
     const data = [
         {name: "Mon", value: 45},
         {name: "Tue", value: 80},
