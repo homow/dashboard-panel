@@ -33,7 +33,7 @@ const IconActionMeetUP = ({icon, text, color = "text-secondary-txt"}) => {
 
 export default function DevMeetUp() {
     return (
-        <div className={"bg-main-bg rounded-md shadow-custom overflow-hidden space-y-4"}>
+        <div className={"bg-main-bg rounded-md shadow-custom overflow-hidden"}>
 
             {/* img wrapper */}
             <div>
