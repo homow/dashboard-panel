@@ -1,4 +1,4 @@
-import {LineChart, Line, XAxis, YAxis, Tooltip, ResponsiveContainer} from 'recharts';
+import {useEffect, useState} from "react";
 
 const salesData = [
     {month: 'Jan', sales: 3200},
@@ -10,6 +10,16 @@ const salesData = [
 ];
 
 export default function TotalSalesChart() {
+    const [chart, setChart] = useState(null);
+
+    useEffect(() => {
+        import("recharts").then(module => setChart(module));
+    }, [])
+
+    if (!chart) return <p className={"text-secondary-txt text-xl text-center"}>Loading Chart...</p>;
+
+    const {LineChart, Line, XAxis, YAxis, Tooltip, ResponsiveContainer} = chart;
+
     return (
         <ResponsiveContainer className={"overflow-hidden"} width="100%" height={300}>
             <LineChart data={salesData}>

@@ -1,8 +1,10 @@
-import {defineConfig, loadEnv} from 'vite'
-import react from '@vitejs/plugin-react-swc'
+import {defineConfig, loadEnv} from "vite";
+import react from "@vitejs/plugin-react-swc";
 import tailwindcss from "@tailwindcss/vite";
-import path from 'path'
-import {fileURLToPath} from "url"
+import path from "path";
+import {fileURLToPath} from "url";
+import {visualizer} from "rollup-plugin-visualizer";
+
 
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
@@ -23,7 +25,13 @@ export default defineConfig(({mode}) => {
         plugins: [
             react(),
             tailwindcss(),
-        ],
+            process.env.ANALYZE === 'true' && visualizer({
+                open: true,
+                gzipSize: true,
+                brotliSize: true,
+                filename: "bundle-report.html",
+            }),
+        ].filter(Boolean),
         build: {
             rollupOptions: {
                 output: {
