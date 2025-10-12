@@ -44,6 +44,7 @@
     --color-disable-txt: #E7E3FC61;
     --color-grey-10: #1A1A1A;
     --color-shadow: #1311201A;
+    --color-divider-light: #E7E3FC1F;
 }
 
 @layer base {

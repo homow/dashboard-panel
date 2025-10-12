@@ -6,5 +6,5 @@ export default function Home() {
         document.title = 'Home | Dashboard';
     }, [])
 
-    return <HomePageLayout/>
+    return <HomePageLayout/>;
 }

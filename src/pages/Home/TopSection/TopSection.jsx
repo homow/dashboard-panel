@@ -34,7 +34,7 @@ function TransActionsIconBox({data, className}) {
             <div>
                 <p className={"text-xs text-secondary-txt"}>{text}</p>
 
-                <p className={"font-medium text-lg 2xl:text-xl"}>{profit}</p>
+                <p className={"text-sm  font-medium sm:text-lg 2xl:text-xl"}>{profit}</p>
             </div>
         </div>
     )
