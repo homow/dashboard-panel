@@ -59,7 +59,7 @@ export default function TotalSalesChart() {
                     </linearGradient>
                 </defs>
 
-                <Legend verticalAlign="top" height={36}/>
+                <Legend verticalAlign="top" height={32}/>
             </LineChart>
         </ResponsiveContainer>
     );

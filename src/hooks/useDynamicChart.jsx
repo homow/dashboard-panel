@@ -7,22 +7,28 @@ export default function useDynamicChart() {
     useEffect(() => {
         let mounted = true;
 
-        import("recharts").then(module => {
-            if (mounted) {
-                setChart(module)
+        import("recharts")
+            .then(module => {
+                if (mounted) {
+                    setChart(module)
+                    setLoading(false);
+                }
+            })
+            .catch(err => {
+                console.log("Error Loading Recharts", err);
                 setLoading(false);
-            }
-        }).catch(err => {
-            console.log("Error Loading Recharts", err);
-            setLoading(false);
-        });
+            });
 
         return () => {
             mounted = false;
         }
     }, []);
 
-    const fallback = <p className={"text-secondary-txt text-xl text-center p-4"}>Loading Chart...</p>;
+    const fallback = (
+        <p className={"text-secondary-txt text-xl text-center p-4"}>
+            Loading Chart...
+        </p>
+    );
 
     return {chart, fallback, loading};
 };
