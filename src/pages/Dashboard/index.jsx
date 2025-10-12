@@ -3,7 +3,7 @@ import DashboardLayout from "./DashboardLayout.jsx";
 
 export default function Dashboard() {
     useEffect(() => {
-        document.title = 'Dashboard | Dashboard';
+        document.title = 'Dashboard | Admin Panel';
     }, [])
 
     return <DashboardLayout/>;

@@ -41,7 +41,7 @@ export default function SideBarMenu({setMobileNavOpen, collapsed}) {
     const dataLinks = [
         {
             title: "Dashboard", dataLinks: [
-                {text: "Home", url: "/", icon: "home"},
+                {text: "Dashboard", url: "/", icon: "home"},
                 {text: "Analytics", url: "/analytics", icon: "analyze"}
             ]
         },
