@@ -1,8 +1,8 @@
 import TopSection from "./TopSection/TopSection.jsx";
-import SalaryChart from "@pages/Home/SalaryChart/SalaryChart.jsx";
+import SalaryChart from "./SalaryChart/SalaryChart.jsx";
 import BottomSection from "./BottomSection/BottomSection.jsx";
 
-export default function HomePageLayout() {
+export default function DashboardLayout() {
     return (
         <>
             <TopSection/>

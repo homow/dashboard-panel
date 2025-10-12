@@ -1,10 +1,10 @@
 import {useEffect} from "react";
-import HomePageLayout from "./HomePageLayout.jsx";
+import DashboardLayout from "./DashboardLayout.jsx";
 
-export default function Home() {
+export default function Dashboard() {
     useEffect(() => {
-        document.title = 'Home | Dashboard';
+        document.title = 'Dashboard | Dashboard';
     }, [])
 
-    return <HomePageLayout/>;
+    return <DashboardLayout/>;
 }
