@@ -1,16 +1,96 @@
-# React + Vite
+### 🌐 README Versions
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+- 🇺🇸 [English Version](./README.md)
+- 🇮🇷 [نسخه فارسی](./README.FA.md)
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+# 🧭 Dashboard Panel
 
-## React Compiler
+A modern, responsive **Admin Dashboard Panel** built with the latest front-end technologies.  
+Fully supports **dark/light themes**, and is designed to be modular, scalable, and developer-friendly.
 
-The React Compiler is currently not compatible with SWC. See [this issue](https://github.com/vitejs/vite-plugin-react/issues/428) for tracking the progress.
+---
 
-## Expanding the ESLint configuration
+## ⚙️ Tech Stack
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+| Tool            | Version | Purpose                    |
+|-----------------|---------|----------------------------|
+| ⚛️ React        | 19      | UI framework               |
+| ⚡ Vite          | 7       | Build tool & dev server    |
+| 🧩 SWC          | 4       | Fast compiler for React    |
+| 🎨 Tailwind CSS | 4       | Utility-first styling      |
+| 📈 Recharts     | 3       | Data visualization         |
+| 🧹 ESLint       | 9       | Linting and code standards |
+
+---
+
+## 🌗 Features
+
+- Dark & Light mode switch
+- Modular folder structure
+- Responsive layout
+- Interactive data charts (Recharts v3)
+- Code linting with ESLint v9
+- Fast builds powered by Vite + SWC
+- Optimized for real dashboard projects
+
+---
+
+## 🗂️ Directory Structure
+
+```
+dashboard-panel/
+│
+├── src/                  # Source code root
+│   ├── assets/           # Images, fonts, and static resources
+│   ├── components/       # Reusable UI components
+│   ├── layout/           # Global layout wrappers (Sidebar, Header, MainLayout)
+│   ├── lib/              # Utility functions, helpers, and custom hooks
+│   ├── pages/            # Route-level pages
+│   ├── routes/           # Centralized route definitions and guards
+│   ├── styles/           # Global styles, Tailwind config
+│   ├── App.jsx           # Root component with router and layout injection
+│   ├── main.jsx          # Entry point for React + Vite
+│   └── config.js         # Global configuration (sub-directory, theme, API endpoints, constants)
+│
+├── eslinf.config.js      # Config esling
+├── jsconfig.json         # Path aliasing and IntelliSense support
+└── vite.config.js        # Vite build and plugin configuration
+```
+
+---
+
+## 🎨 Design Reference (Original Figma Template)
+
+This project was initially inspired by the **Materio Dashboard UI Kit**,  
+and further developed and customized by me.
+
+👉 **Original Figma Design (View-Only Link)**  
+[https://www.figma.com/file/TiJ4WPxInJbb7G4MIPmt8E/materio-figma-dashboard-ui-kit-live?node-id=7612-64092](https://www.figma.com/file/TiJ4WPxInJbb7G4MIPmt8E/materio-figma-dashboard-ui-kit-live?node-id=7612-64092)
+
+---
+
+## 🚀 Getting Started
+
+```bash
+# Install dependencies
+npm install
+
+# Run the development server
+npm run dev
+
+# Build for production
+npm run build
+
+# build preview
+npm run preview
+```
+
+---
+
+💡 Notes
+
+The project is under active development.
+
+Recharts components and layout system are being expanded progressively.
