@@ -39,10 +39,10 @@ export default function ModernRadialChart({className = ""}) {
 
     return (
         <div
-            className={`relative w-full py-6 px-1 rounded-md bg-gradient-to-br from-slate-800 via-slate-900 to-slate-800 shadow-lg ${className}`}
+            className={`relative w-full px-1 rounded-md bg-gradient-to-br from-slate-800 via-slate-900 to-slate-800 shadow-lg ${className}`}
             aria-hidden={false}
         >
-            <h3 className="text-sm font-semibold text-slate-200 mb-2">Module Health</h3>
+            <h3 className="font-medium text-slate-200 mb-2">Module Health</h3>
 
             <div className="absolute inset-0 top-5 flex items-center justify-center pointer-events-none">
                 <div className="text-center pointer-events-none">

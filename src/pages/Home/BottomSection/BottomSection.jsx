@@ -1,11 +1,18 @@
 import DevMeetUp from "./DevMeetUp.jsx";
 import RadialChart from "./RadialChart.jsx"
+import UserGrowthAreaChart from "./AreaChart.jsx"
 
 export default function BottomSection() {
     return (
-        <section className={"mt-8 flex flex-col gap-6 @2xl/main:flex-row"}>
+        <section className={"mt-8 grid grid-cols-1 gap-6 @2xl/main:grid-cols-2 @6xl/main:grid-cols-3"}>
+            {/* meet up section */}
             <DevMeetUp/>
-            <RadialChart className={"h-70"}/>
+
+            {/* radial chart */}
+            <RadialChart className={"h-74 py-7 @2xl/main:h-auto @2xl/main:p-10"}/>
+
+            {/* area chart */}
+            <UserGrowthAreaChart className={"@2xl/main:col-span-2 @6xl/main:col-span-1"}/>
         </section>
     )
 }
