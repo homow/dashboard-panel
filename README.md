@@ -5,6 +5,9 @@
 
 ---
 
+### Show Demo
+https://homow.github.io/dashboard-panel/
+
 # 🧭 Dashboard Panel
 
 A modern, responsive **Admin Dashboard Panel** built with the latest front-end technologies.  
