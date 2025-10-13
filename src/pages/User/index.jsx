@@ -1,5 +1,5 @@
 import {useEffect} from "react"
-import {DataTable} from "@components/ui/DataTable.jsx"
+import DataTable from "@components/ui/DataTable.jsx"
 import {createColumnHelper} from "@tanstack/react-table"
 
 import avatar1 from "@img/user/Avatar.webp"
@@ -216,5 +216,9 @@ export default function User() {
         document.title = "Users | Dashboard"
     }, [])
 
-    return <DataTable data={data} columns={columns}/>
+    return (
+        <section>
+            <DataTable data={data} columns={columns}/>
+        </section>
+    )
 }

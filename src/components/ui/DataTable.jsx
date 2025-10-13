@@ -20,7 +20,7 @@ import {
 
 import Button from "@components/ui/Button.jsx"
 
-export function DataTable({columns, data}) {
+export default function DataTable({columns, data}) {
     const [pagination, setPagination] = useState({
         pageIndex: 0,
         pageSize: 10,
