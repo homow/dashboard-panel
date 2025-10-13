@@ -1,5 +1,5 @@
 import {useEffect} from "react"
-import {DataTable} from "@pages/User/DataTable.jsx"
+import {DataTable} from "@components/ui/DataTable.jsx"
 import {createColumnHelper} from "@tanstack/react-table"
 
 import avatar1 from "@img/user/Avatar.webp"

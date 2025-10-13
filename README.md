@@ -14,14 +14,17 @@ Fully supports **dark/light themes**, and is designed to be modular, scalable, a
 
 ## ⚙️ Tech Stack
 
-| Tool            | Version | Purpose                    |
-|-----------------|---------|----------------------------|
-| ⚛️ React        | 19      | UI framework               |
-| ⚡ Vite          | 7       | Build tool & dev server    |
-| 🧩 SWC          | 4       | Fast compiler for React    |
-| 🎨 Tailwind CSS | 4       | Utility-first styling      |
-| 📈 Recharts     | 3       | Data visualization         |
-| 🧹 ESLint       | 9       | Linting and code standards |
+| Tool              | Version | Purpose                            |
+|-------------------|---------|------------------------------------|
+| ⚛️ React          | 19      | UI framework                       |
+| ⚡ Vite            | 7       | Build tool & dev server            |
+| 🧩 SWC            | 4       | Fast compiler for React            |
+| 🎨 Tailwind CSS   | 4       | Utility-first styling              |
+| 📈 Recharts       | 3       | Data visualization                 |
+| 🧹 ESLint         | 9       | Linting and code standards         |
+| 🧱 Radix UI       | 2       | Accessible low-level UI primitives |
+| 💎 shadcn/ui      | Latest  | Styled, reusable React components  |
+| 📊 TanStack Table | 8       | Headless table for React           |
 
 ---
 
