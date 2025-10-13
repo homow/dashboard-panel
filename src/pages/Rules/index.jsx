@@ -1,9 +1,6 @@
 import {useEffect} from "react";
-
-import {createColumnHelper} from "@tanstack/react-table"
 import DataTable from "@components/ui/DataTable.jsx";
-
-const columnHelper = createColumnHelper()
+import {columnHelper} from "@/lib/utils";
 
 const columns = [
     columnHelper.accessor("name", {
@@ -30,10 +27,10 @@ const columns = [
         header: "Action",
         cell: () => (
             <div className="flex items-center justify-end gap-4">
-                <svg className={"size-6 cursor-pointer"}>
+                <svg className={"size-6 cursor-pointer text-rose-600"}>
                     <use href="#trash-icon"></use>
                 </svg>
-                <svg className={"size-6 cursor-pointer"}>
+                <svg className={"size-6 cursor-pointer text-blue-500"}>
                     <use href="#pencil-icon"></use>
                 </svg>
             </div>

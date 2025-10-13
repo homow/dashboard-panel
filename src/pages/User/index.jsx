@@ -1,6 +1,6 @@
 import {useEffect} from "react"
 import DataTable from "@components/ui/DataTable.jsx"
-import {createColumnHelper} from "@tanstack/react-table"
+import {columnHelper} from "@/lib/utils"
 
 import avatar1 from "@img/user/Avatar.webp"
 import avatar2 from "@img/user/Avatar-1.webp"
@@ -9,8 +9,6 @@ import avatar4 from "@img/user/Avatar-3.webp"
 import avatar5 from "@img/user/Avatar-4.webp"
 import avatar6 from "@img/user/Avatar-5.webp"
 import avatar7 from "@img/top-bar/Avatar.webp"
-
-const columnHelper = createColumnHelper()
 
 const data = [
     {
