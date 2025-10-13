@@ -1,4 +1,4 @@
-import cn from "@/lib/utils/cn"
+import {cn} from "@/lib/utils"
 import lapTopImg from "@img/home/Image.webp"
 
 const DevMeetUpDate = ({text, subText, icon}) => {
