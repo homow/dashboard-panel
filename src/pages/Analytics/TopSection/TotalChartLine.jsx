@@ -7,7 +7,7 @@ const salesData = [
     {month: 'Apr', sales: 5200},
 ];
 
-export default function TotalSalesChart() {
+export default function TotalSalesChart({className}) {
 
     const {chart, fallback, loading} = useDynamicChart();
 
@@ -16,7 +16,7 @@ export default function TotalSalesChart() {
     const {LineChart, Line, XAxis, YAxis, Tooltip, ResponsiveContainer, CartesianGrid, Legend} = chart;
 
     return (
-        <ResponsiveContainer width="100%" height={300}>
+        <ResponsiveContainer className={`main-components overflow-hidden p-0 ${className}`} width="100%" height={300}>
             <LineChart data={salesData} margin={{top: 20, right: 20, left: 0, bottom: 0}}>
 
                 <CartesianGrid vertical={false} stroke="var(--color-secondary-txt)" strokeDasharray="4 4"/>
