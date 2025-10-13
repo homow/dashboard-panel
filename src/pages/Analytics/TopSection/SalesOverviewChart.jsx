@@ -37,7 +37,6 @@ export default function SalesOverviewChart({className}) {
                         cy="50%"
                         innerRadius={50}
                         outerRadius={90}
-                        // ⛔️ No label here
                     >
                         {salesData.map((entry, index) => (
                             <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]}/>
@@ -51,7 +50,7 @@ export default function SalesOverviewChart({className}) {
                 </PieChart>
             </ResponsiveContainer>
 
-            <div style={{textAlign: 'center', fontSize: '0.875rem', fontWeight: '600', color: '#1F2937'}}>
+            <div style={{textAlign: 'center', fontSize: '0.875rem', fontWeight: '600'}}>
                 Total Sales: $86,400
             </div>
         </div>
