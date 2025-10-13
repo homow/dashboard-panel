@@ -16,7 +16,7 @@ export default function TotalSalesChart() {
     const {LineChart, Line, XAxis, YAxis, Tooltip, ResponsiveContainer, CartesianGrid, Legend} = chart;
 
     return (
-        <ResponsiveContainer className={"overflow-hidden"} width="100%" height={300}>
+        <ResponsiveContainer width="100%" height={300}>
             <LineChart data={salesData} margin={{top: 20, right: 20, left: 0, bottom: 0}}>
 
                 <CartesianGrid vertical={false} stroke="var(--color-secondary-txt)" strokeDasharray="4 4"/>

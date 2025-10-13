@@ -1,11 +1,4 @@
-import React from "react";
-import {
-    RadialBarChart,
-    RadialBar,
-    Legend,
-    Tooltip,
-    ResponsiveContainer,
-} from "recharts";
+import useDynamicChart from "@/hooks/useDynamicChart.jsx";
 
 function RadialGradientDefs() {
     return (
@@ -23,10 +16,22 @@ function RadialGradientDefs() {
 }
 
 export default function ModernRadialChart({className = ""}) {
+    const {chart, fallback, loading} = useDynamicChart();
+
+    if (loading || !chart) return fallback;
+
+    const {
+        RadialBarChart,
+        RadialBar,
+        Legend,
+        Tooltip,
+        ResponsiveContainer
+    } = chart;
+
     const data = [
-        {name: "UI", value: 75, fill: "url(#gradSky)"},
-        {name: "API", value: 50, fill: "rgba(14,165,255,0.35)"},
-        {name: "Auth", value: 30, fill: "rgba(14,165,255,0.18)"},
+        {name: "UI", value: 75, fill: "var(--color-sky-400)"},
+        {name: "API", value: 50, fill: "rgba(14,165,255,0.60)"},
+        {name: "Auth", value: 30, fill: "rgba(14,165,255,0.30)"},
     ];
 
     const tooltipStyle = {
@@ -73,7 +78,7 @@ export default function ModernRadialChart({className = ""}) {
 
                         <Tooltip
                             contentStyle={tooltipStyle}
-                            itemStyle={{color: "#e6f6ff"}}
+                            itemStyle={{color: "var(--color-green-400)"}}
                             cursor={false}
                             formatter={(value, name) => [`${value}%`, name]}
                         />
@@ -83,7 +88,7 @@ export default function ModernRadialChart({className = ""}) {
                             layout="horizontal"
                             verticalAlign="bottom"
                             align="center"
-                            wrapperStyle={{color: "#94a3b8", paddingTop: 8}}
+                            wrapperStyle={{color: "var(--color-sky-400)", paddingTop: 8}}
                         />
                     </RadialBarChart>
                 </ResponsiveContainer>

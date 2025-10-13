@@ -1,13 +1,4 @@
-import {useEffect, useState} from "react";
-import {
-    AreaChart,
-    Area,
-    XAxis,
-    YAxis,
-    CartesianGrid,
-    Tooltip,
-    ResponsiveContainer,
-} from "recharts";
+import useDynamicChart from "@/hooks/useDynamicChart.jsx";
 
 const data = [
     {name: "Jan", users: 400},
@@ -18,24 +9,38 @@ const data = [
 ];
 
 export default function UserGrowthAreaChart({className}) {
+    const {chart, loading, fallback} = useDynamicChart();
+
+    if (loading || !chart) return fallback;
+
+    const {
+        AreaChart,
+        Area,
+        XAxis,
+        YAxis,
+        CartesianGrid,
+        Tooltip,
+        ResponsiveContainer
+    } = chart;
+
     return (
         <div className={`w-full bg-main-bg rounded-md shadow-custom py-4 ${className}`}>
             <ResponsiveContainer width="100%" height="100%">
                 <AreaChart data={data} margin={{top: 20, right: 30, left: 0, bottom: 0}}>
                     <defs>
                         <linearGradient id="colorSky" x1="0" y1="0" x2="0" y2="1">
-                            <stop offset="5%" stopColor="#0ea5e9" stopOpacity={0.8}/>
-                            <stop offset="95%" stopColor="#0ea5e9" stopOpacity={0}/>
+                            <stop offset="5%" stopColor="var(--color-violet-500)" stopOpacity={0.8}/>
+                            <stop offset="95%" stopColor="var(--color-violet-500)" stopOpacity={0}/>
                         </linearGradient>
                     </defs>
-                    <XAxis dataKey="name" stroke="#94a3b8"/>
-                    <YAxis stroke="#94a3b8"/>
+                    <XAxis dataKey="name" stroke="var(--color-secondary-txt)"/>
+                    <YAxis stroke="var(--color-secondary-txt)"/>
                     <CartesianGrid strokeDasharray="3 3"/>
                     <Tooltip/>
                     <Area
                         type="monotone"
                         dataKey="users"
-                        stroke="#0ea5e9"
+                        stroke="var(--color-violet-600)"
                         fill="url(#colorSky)"
                         strokeWidth={3}
                     />
