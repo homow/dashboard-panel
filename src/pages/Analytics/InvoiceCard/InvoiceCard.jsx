@@ -9,7 +9,7 @@ export default function InvoiceCard() {
                     </svg>
                     <strong className="tracking-wide">MATERIAL</strong>
                 </div>
-                <h2 className="text-2xl font-semibold">Invoice #3492</h2>
+                <p className="md:text-lg font-medium">Invoice #3492</p>
             </div>
 
             {/* Sender & Recipient */}
@@ -42,12 +42,12 @@ export default function InvoiceCard() {
             </div>
 
             {/* Table */}
-            <div className="overflow-hidden rounded-lg border border-disable-txt mb-8">
+            <div className="overflow-x-auto rounded-lg border border-disable-txt mb-8">
                 <table className="w-full text-left border-collapse">
                     <thead className="bg-primary-bg text-sm uppercase tracking-wide">
                     <tr>
                         <th className="py-3 px-4">Service</th>
-                        <th className="hidden @2xl:table-cell px-4">Description</th>
+                        <th className=" @2xl:table-cell px-4">Description</th>
                         <th className="px-4">Hours</th>
                         <th className="px-4">Unit</th>
                         <th className="px-4">Total</th>
@@ -62,7 +62,7 @@ export default function InvoiceCard() {
                     ].map((item, i) => (
                         <tr key={i} className="hover:bg-disable-txt transition-colors">
                             <td className="py-3 px-4 font-medium">{item.name}</td>
-                            <td className="hidden @2xl:table-cell px-4 text-secondary-txt">{item.desc}</td>
+                            <td className=" @2xl:table-cell px-4 text-secondary-txt">{item.desc}</td>
                             <td className="px-4">{item.hours}</td>
                             <td className="px-4">${item.cost}</td>
                             <td className="px-4 font-semibold">${item.total}</td>

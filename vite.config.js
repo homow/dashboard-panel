@@ -25,7 +25,7 @@ export default defineConfig(({mode}) => {
         plugins: [
             react(),
             tailwindcss(),
-            process.env.ANALYZE === 'true' && visualizer({
+            env.ANALYZE === 'true' && visualizer({
                 open: true,
                 gzipSize: true,
                 brotliSize: true,
@@ -36,8 +36,7 @@ export default defineConfig(({mode}) => {
             rollupOptions: {
                 output: {
                     manualChunks: {
-                        react: ["react", "react-dom", "react-router-dom"],
-                        charts: ["recharts"],
+                        vendor: ["react", "react-dom", "react-router-dom"],
                         ui: ["clsx", "tailwind-merge"],
                     }
                 }
