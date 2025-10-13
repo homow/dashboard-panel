@@ -1,5 +1,7 @@
 "use client"
 
+import {useState} from "react";
+
 import {
     flexRender,
     getCoreRowModel,
@@ -19,15 +21,23 @@ import {
 import Button from "@components/ui/button"
 
 export function DataTable({columns, data}) {
+    const [pagination, setPagination] = useState({
+        pageIndex: 0,
+        pageSize: 10,
+    })
+
     const table = useReactTable({
         data,
         columns,
+        state: {pagination},
+        onPaginationChange: setPagination,
         getCoreRowModel: getCoreRowModel(),
         getPaginationRowModel: getPaginationRowModel(),
+        autoResetPageIndex: false,
     })
 
     return (
-        <div className="main-components px-0">
+        <div className="main-components">
             <Table>
                 <TableHeader>
                     {table.getHeaderGroups().map((headerGroup) => (
@@ -46,8 +56,8 @@ export function DataTable({columns, data}) {
                     ))}
                 </TableHeader>
                 <TableBody>
-                    {table.getRowModel().rows?.length ? (
-                        table.getRowModel().rows.map((row) => (
+                    {table.getPaginationRowModel().rows?.length ? (
+                        table.getPaginationRowModel().rows.map((row) => (
                             <TableRow
                                 key={row.id}
                                 data-state={row.getIsSelected() && "selected"}
@@ -71,19 +81,29 @@ export function DataTable({columns, data}) {
                     )}
                 </TableBody>
             </Table>
-            <div className="flex items-center justify-center space-x-2 py-4">
-                <Button
-                    onClick={() => table.previousPage()}
-                    disabled={!table.getCanPreviousPage()}
-                >
-                    Previous
-                </Button>
-                <Button
-                    onClick={() => table.nextPage()}
-                    disabled={!table.getCanNextPage()}
-                >
-                    Next
-                </Button>
+            <div className="flex items-center justify-between space-x-2 py-4">
+                <div className={"space-x-4"}>
+                    <Button
+                        onClick={() => table.previousPage()}
+                        disabled={!table.getCanPreviousPage()}
+                    >
+                        Previous
+                    </Button>
+                    <Button
+                        onClick={() => table.nextPage()}
+                        disabled={!table.getCanNextPage()}
+                    >
+                        Next
+                    </Button>
+                </div>
+                <div className="flex items-center gap-6 py-2 text-sm text-muted-foreground">
+                    <div>
+                        Page {table.getState().pagination.pageIndex + 1} of {table.getPageCount()}
+                    </div>
+                    <div className={"text-secondary-txt"}>
+                        Showing {table.getFilteredRowModel().rows.length} of {table.getFilteredRowModel().rows.length} rows
+                    </div>
+                </div>
             </div>
         </div>
     )

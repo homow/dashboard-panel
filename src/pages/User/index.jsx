@@ -2,6 +2,14 @@ import {useEffect} from "react"
 import {DataTable} from "@pages/User/DataTable.jsx"
 import {createColumnHelper} from "@tanstack/react-table"
 
+import avatar1 from "@img/user/Avatar.webp"
+import avatar2 from "@img/user/Avatar-1.webp"
+import avatar3 from "@img/user/Avatar-2.webp"
+import avatar4 from "@img/user/Avatar-3.webp"
+import avatar5 from "@img/user/Avatar-4.webp"
+import avatar6 from "@img/user/Avatar-5.webp"
+import avatar7 from "@img/top-bar/Avatar.webp"
+
 const columnHelper = createColumnHelper()
 
 const data = [
@@ -11,6 +19,7 @@ const data = [
         role: "Admin",
         plan: "Enterprise",
         status: "Pending",
+        avatar: avatar1,
     },
     {
         name: "Benedetto Rossiter",
@@ -18,6 +27,7 @@ const data = [
         role: "Editor",
         plan: "Team",
         status: "Active",
+        avatar: avatar7,
     },
     {
         name: "Bertie Emblin",
@@ -25,6 +35,7 @@ const data = [
         role: "Editor",
         plan: "Company",
         status: "Active",
+        avatar: avatar2,
     },
     {
         name: "Bertha Biner",
@@ -32,6 +43,7 @@ const data = [
         role: "Editor",
         plan: "Team",
         status: "Active",
+        avatar: avatar3,
     },
     {
         name: "Beverlee Krabbe",
@@ -39,6 +51,7 @@ const data = [
         role: "Maintainer",
         plan: "Company",
         status: "Active",
+        avatar: avatar4,
     },
     {
         name: "Bradon Rosebotham",
@@ -46,6 +59,7 @@ const data = [
         role: "Maintainer",
         plan: "Company",
         status: "Active",
+        avatar: avatar5,
     },
     {
         name: "Bree Kildey",
@@ -53,6 +67,7 @@ const data = [
         role: "Editor",
         plan: "Team",
         status: "Active",
+        avatar: avatar6,
     },
     {
         name: "Florence Melancon",
@@ -60,6 +75,7 @@ const data = [
         role: "Maintainer",
         plan: "Company",
         status: "Inactive",
+        avatar: avatar1,
     },
     {
         name: "Brockie Myles",
@@ -67,6 +83,71 @@ const data = [
         role: "Maintainer",
         plan: "Basic",
         status: "Active",
+        avatar: avatar7,
+    },
+    {
+        name: "Brockie Myles II",
+        email: "tamika.Dickens79@hotmail.com",
+        role: "Maintainer",
+        plan: "Basic",
+        status: "Active",
+        avatar: avatar2,
+    },
+    {
+        name: "Brockie Myles III",
+        email: "tamika.Dickens79@hotmail.com",
+        role: "Maintainer",
+        plan: "Basic",
+        status: "Active",
+        avatar: avatar3,
+    },
+    {
+        name: "Brockie Myles IV",
+        email: "tamika.Dickens79@hotmail.com",
+        role: "Maintainer",
+        plan: "Basic",
+        status: "Active",
+        avatar: avatar4,
+    },
+    {
+        name: "Brockie Myles V",
+        email: "tamika.Dickens79@hotmail.com",
+        role: "Maintainer",
+        plan: "Basic",
+        status: "Active",
+        avatar: avatar5,
+    },
+    {
+        name: "Brockie Myles VI",
+        email: "tamika.Dickens79@hotmail.com",
+        role: "Maintainer",
+        plan: "Basic",
+        status: "Active",
+        avatar: avatar6,
+    },
+    {
+        name: "Brockie Myles VII",
+        email: "tamika.Dickens79@hotmail.com",
+        role: "Maintainer",
+        plan: "Basic",
+        status: "Active",
+        avatar: avatar1,
+    },
+    {
+        name: "Brockie Myles VIII",
+        email: "tamika.Dickens79@hotmail.com",
+        role: "Maintainer",
+        plan: "Basic",
+        status: "Active",
+        avatar: avatar7,
+    },
+    {
+        name: "Brockie Myles IX",
+        email: "tamika.Dickens79@hotmail.com",
+        role: "Maintainer",
+        plan: "Basic",
+        status: "Active",
+        avatar: avatar2,
     },
 ]
 
