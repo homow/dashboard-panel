@@ -15,7 +15,7 @@ const columnHelper = createColumnHelper()
 const data = [
     {
         name: "Jordan Stevenson",
-        email: "susanna.Lind57@gmail.com",
+        email: "susanna.lind57@gmail.com",
         role: "Admin",
         plan: "Enterprise",
         status: "Pending",
@@ -23,7 +23,7 @@ const data = [
     },
     {
         name: "Benedetto Rossiter",
-        email: "estelle.Bailey10@gmail.com",
+        email: "estelle.bailey10@gmail.com",
         role: "Editor",
         plan: "Team",
         status: "Active",
@@ -31,7 +31,7 @@ const data = [
     },
     {
         name: "Bertie Emblin",
-        email: "@emblinf",
+        email: "emblin.f@gmail.com",
         role: "Editor",
         plan: "Company",
         status: "Active",
@@ -47,7 +47,7 @@ const data = [
     },
     {
         name: "Beverlee Krabbe",
-        email: "ahmad.Collins@yahoo.com",
+        email: "ahmad.collins@yahoo.com",
         role: "Maintainer",
         plan: "Company",
         status: "Active",
@@ -71,85 +71,85 @@ const data = [
     },
     {
         name: "Florence Melancon",
-        email: "florencio.Little11@hotmail.com",
+        email: "florencio.little11@hotmail.com",
         role: "Maintainer",
         plan: "Company",
         status: "Inactive",
         avatar: avatar1,
     },
     {
-        name: "Brockie Myles",
-        email: "tamika.Dickens79@hotmail.com",
+        name: "Nina McAlister",
+        email: "nina.mcalister90@gmail.com",
         role: "Maintainer",
         plan: "Basic",
         status: "Active",
         avatar: avatar7,
     },
     {
-        name: "Brockie Myles II",
-        email: "tamika.Dickens79@hotmail.com",
-        role: "Maintainer",
-        plan: "Basic",
-        status: "Active",
+        name: "Oscar Petrelli",
+        email: "oscar.petrelli@gmail.com",
+        role: "Viewer",
+        plan: "Starter",
+        status: "Pending",
         avatar: avatar2,
     },
     {
-        name: "Brockie Myles III",
-        email: "tamika.Dickens79@hotmail.com",
-        role: "Maintainer",
-        plan: "Basic",
+        name: "Clara Johnston",
+        email: "clara.j@hotmail.com",
+        role: "Editor",
+        plan: "Enterprise",
         status: "Active",
         avatar: avatar3,
     },
     {
-        name: "Brockie Myles IV",
-        email: "tamika.Dickens79@hotmail.com",
+        name: "Marius Lindberg",
+        email: "marius.lindberg@outlook.com",
         role: "Maintainer",
-        plan: "Basic",
-        status: "Active",
+        plan: "Company",
+        status: "Inactive",
         avatar: avatar4,
     },
     {
-        name: "Brockie Myles V",
-        email: "tamika.Dickens79@hotmail.com",
-        role: "Maintainer",
-        plan: "Basic",
+        name: "Helena Strauss",
+        email: "helena.s@gmail.com",
+        role: "Admin",
+        plan: "Team",
         status: "Active",
         avatar: avatar5,
     },
     {
-        name: "Brockie Myles VI",
-        email: "tamika.Dickens79@hotmail.com",
+        name: "Victor Serrano",
+        email: "victor.serrano@yahoo.com",
         role: "Maintainer",
         plan: "Basic",
-        status: "Active",
+        status: "Pending",
         avatar: avatar6,
     },
     {
-        name: "Brockie Myles VII",
-        email: "tamika.Dickens79@hotmail.com",
-        role: "Maintainer",
-        plan: "Basic",
+        name: "Lana Kirov",
+        email: "lana.kirov@gmail.com",
+        role: "Editor",
+        plan: "Enterprise",
         status: "Active",
         avatar: avatar1,
     },
     {
-        name: "Brockie Myles VIII",
-        email: "tamika.Dickens79@hotmail.com",
-        role: "Maintainer",
-        plan: "Basic",
-        status: "Active",
+        name: "Ethan Delgado",
+        email: "ethan.delgado@protonmail.com",
+        role: "Viewer",
+        plan: "Team",
+        status: "Inactive",
         avatar: avatar7,
     },
     {
-        name: "Brockie Myles IX",
-        email: "tamika.Dickens79@hotmail.com",
+        name: "Tobias Reiner",
+        email: "tobias.reiner@gmail.com",
         role: "Maintainer",
-        plan: "Basic",
+        plan: "Company",
         status: "Active",
         avatar: avatar2,
     },
-]
+];
 
 const columns = [
     columnHelper.accessor("name", {
@@ -165,7 +165,7 @@ const columns = [
                             className="w-6 h-6 rounded-full object-cover border border-gray-300"
                         />
                     )}
-                    <span className="font-medium">{row.name}</span>
+                    <span>{row.name}</span>
                 </div>
             )
         },
@@ -179,7 +179,7 @@ const columns = [
     columnHelper.accessor("role", {
         header: "Role",
         cell: info => (
-            <span className="text-xs font-semibold uppercase tracking-wide text-gray-700">
+            <span className="text-xs font-semibold uppercase tracking-wide text-secondary-txt">
         {info.getValue()}
       </span>
         ),
@@ -187,7 +187,7 @@ const columns = [
     columnHelper.accessor("plan", {
         header: "Plan",
         cell: info => (
-            <span className="text-xs text-gray-600">{info.getValue()}</span>
+            <span className="text-xs text-secondary-txt">{info.getValue()}</span>
         ),
     }),
     columnHelper.accessor("status", {
@@ -196,10 +196,10 @@ const columns = [
             const value = info.getValue()
             const color =
                 value === "Active"
-                    ? "text-green-700 bg-green-100"
+                    ? "text-green-700 bg-green-100 dark:bg-green-700 dark:text-green-100"
                     : value === "Pending"
-                        ? "text-yellow-700 bg-yellow-100"
-                        : "text-red-700 bg-red-100"
+                        ? "text-yellow-700 bg-yellow-100 dark:bg-yellow-700 dark:text-yellow-100"
+                        : "text-red-700 bg-red-100 dark:bg-red-700 dark:text-red-100"
             return (
                 <span
                     className={`text-xs font-medium rounded-full px-2 py-0.5 ${color}`}
