@@ -36,6 +36,11 @@ export function DataTable({columns, data}) {
         autoResetPageIndex: false,
     })
 
+    const pageIndex = table.getState().pagination.pageIndex
+    const pageSize = table.getState().pagination.pageSize
+    const total = table.getFilteredRowModel().rows.length
+    const seen = Math.min((pageIndex + 1) * pageSize, total)
+
     return (
         <div className="main-components">
             <Table>
@@ -81,7 +86,7 @@ export function DataTable({columns, data}) {
                     )}
                 </TableBody>
             </Table>
-            <div className="flex items-center justify-between space-x-2 py-4">
+            <div className="flex flex-col items-center justify-between gap-4 space-x-2 py-4 @lg/main:flex-row">
                 <div className={"space-x-4"}>
                     <Button
                         onClick={() => table.previousPage()}
@@ -101,7 +106,7 @@ export function DataTable({columns, data}) {
                         Page {table.getState().pagination.pageIndex + 1} of {table.getPageCount()}
                     </div>
                     <div className={"text-secondary-txt"}>
-                        Showing {table.getFilteredRowModel().rows.length} of {table.getFilteredRowModel().rows.length} rows
+                        Showing {seen} of {total} rows
                     </div>
                 </div>
             </div>

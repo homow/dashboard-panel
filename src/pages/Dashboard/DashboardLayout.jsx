@@ -1,6 +1,7 @@
 import TopSection from "./TopSection/TopSection.jsx";
-import SalaryChart from "./SalaryChart/SalaryChart.jsx";
+const SalaryChart = lazy(() => import("./SalaryChart/SalaryChart.jsx"));
 import BottomSection from "./BottomSection/BottomSection.jsx";
+import {lazy} from "react";
 
 export default function DashboardLayout() {
     return (

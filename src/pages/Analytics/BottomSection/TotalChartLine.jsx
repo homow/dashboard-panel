@@ -1,4 +1,4 @@
-import useDynamicChart from "@/hooks/useDynamicChart.jsx";
+import {LineChart, Line, XAxis, YAxis, Tooltip, ResponsiveContainer, CartesianGrid, Legend} from 'recharts';
 
 const salesData = [
     {month: 'Jan', sales: 3200},
@@ -8,13 +8,6 @@ const salesData = [
 ];
 
 export default function TotalSalesChart({className}) {
-
-    const {chart, fallback, loading} = useDynamicChart();
-
-    if (!chart || loading) return fallback;
-
-    const {LineChart, Line, XAxis, YAxis, Tooltip, ResponsiveContainer, CartesianGrid, Legend} = chart;
-
     return (
         <div className={`main-components w-full h-70 overflow-hidden p-0 ${className}`}>
             <ResponsiveContainer width={"100%"} height={"100%"}>

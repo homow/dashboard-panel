@@ -1,4 +1,12 @@
-import useDynamicChart from "@/hooks/useDynamicChart.jsx";
+import {
+    AreaChart,
+    Area,
+    XAxis,
+    YAxis,
+    CartesianGrid,
+    Tooltip,
+    ResponsiveContainer
+} from "recharts"
 
 const data = [
     {name: "Jan", users: 400},
@@ -9,20 +17,6 @@ const data = [
 ];
 
 export default function UserGrowthAreaChart({className}) {
-    const {chart, loading, fallback} = useDynamicChart();
-
-    if (loading || !chart) return fallback;
-
-    const {
-        AreaChart,
-        Area,
-        XAxis,
-        YAxis,
-        CartesianGrid,
-        Tooltip,
-        ResponsiveContainer
-    } = chart;
-
     return (
         <div className={`w-full bg-main-bg rounded-md shadow-custom py-4 ${className}`}>
             <ResponsiveContainer width="100%" height="100%">

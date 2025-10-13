@@ -1,4 +1,10 @@
-import useDynamicChart from "@/hooks/useDynamicChart.jsx";
+import {
+    RadialBarChart,
+    RadialBar,
+    Legend,
+    Tooltip,
+    ResponsiveContainer
+} from "recharts";
 
 function RadialGradientDefs() {
     return (
@@ -16,18 +22,6 @@ function RadialGradientDefs() {
 }
 
 export default function ModernRadialChart({className = ""}) {
-    const {chart, fallback, loading} = useDynamicChart();
-
-    if (loading || !chart) return fallback;
-
-    const {
-        RadialBarChart,
-        RadialBar,
-        Legend,
-        Tooltip,
-        ResponsiveContainer
-    } = chart;
-
     const data = [
         {name: "UI", value: 75, fill: "var(--color-sky-400)"},
         {name: "API", value: 50, fill: "rgba(14,165,255,0.60)"},

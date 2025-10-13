@@ -154,19 +154,41 @@ const data = [
 const columns = [
     columnHelper.accessor("name", {
         header: "Name",
-        cell: info => info.getValue(),
+        cell: info => {
+            const row = info.row.original
+            return (
+                <div className="flex items-center gap-2">
+                    {row.avatar && (
+                        <img
+                            src={row.avatar}
+                            alt={row.name}
+                            className="w-6 h-6 rounded-full object-cover border border-gray-300"
+                        />
+                    )}
+                    <span className="font-medium">{row.name}</span>
+                </div>
+            )
+        },
     }),
     columnHelper.accessor("email", {
         header: "Email",
-        cell: info => info.getValue(),
+        cell: info => (
+            <span className="text-sm text-muted-foreground">{info.getValue()}</span>
+        ),
     }),
     columnHelper.accessor("role", {
         header: "Role",
-        cell: info => info.getValue(),
+        cell: info => (
+            <span className="text-xs font-semibold uppercase tracking-wide text-gray-700">
+        {info.getValue()}
+      </span>
+        ),
     }),
     columnHelper.accessor("plan", {
         header: "Plan",
-        cell: info => info.getValue(),
+        cell: info => (
+            <span className="text-xs text-gray-600">{info.getValue()}</span>
+        ),
     }),
     columnHelper.accessor("status", {
         header: "Status",
@@ -177,8 +199,14 @@ const columns = [
                     ? "text-green-700 bg-green-100"
                     : value === "Pending"
                         ? "text-yellow-700 bg-yellow-100"
-                        : "text-red-700 bg-red-100";
-            return <span className={`text-xs font-light rounded-full px-1.5 py-0.5 ${color}`}>{value}</span>
+                        : "text-red-700 bg-red-100"
+            return (
+                <span
+                    className={`text-xs font-medium rounded-full px-2 py-0.5 ${color}`}
+                >
+          {value}
+        </span>
+            )
         },
     }),
 ]

@@ -1,4 +1,11 @@
-import useDynamicChart from "@/hooks/useDynamicChart.jsx"
+import {
+    PieChart,
+    Pie,
+    Cell,
+    ResponsiveContainer,
+    Tooltip,
+    Legend,
+} from "recharts";
 
 const salesData = [
     {name: 'Apparel', value: 1840},
@@ -10,19 +17,6 @@ const salesData = [
 const COLORS = ['#8B5CF6', '#6366F1', '#3B82F6', '#0EA5E9']
 
 export default function SalesOverviewChart({className}) {
-    const {chart, fallback, loading} = useDynamicChart()
-
-    if (!chart || loading) return fallback
-
-    const {
-        PieChart,
-        Pie,
-        Cell,
-        ResponsiveContainer,
-        Tooltip,
-        Legend,
-    } = chart
-
     return (
         <div className={`main-components p-0 overflow-hidden flex flex-col gap-2 ${className}`}>
             <p className="font-medium text-center text-lg md:text-xl pt-2">Sales Overview</p>

@@ -1,4 +1,13 @@
-import useDynamicChart from "@/hooks/useDynamicChart.jsx"
+import {
+    Radar,
+    RadarChart,
+    PolarGrid,
+    PolarAngleAxis,
+    PolarRadiusAxis,
+    Legend,
+    Tooltip,
+    ResponsiveContainer,
+} from 'recharts';
 
 const data = [
     {month: 'Jan', income: 80, netWorth: 120},
@@ -10,21 +19,6 @@ const data = [
 ]
 
 export default function PerformanceChart({className}) {
-    const {chart, fallback, loading} = useDynamicChart()
-
-    if (!chart || loading) return fallback
-
-    const {
-        Radar,
-        RadarChart,
-        PolarGrid,
-        PolarAngleAxis,
-        PolarRadiusAxis,
-        Legend,
-        Tooltip,
-        ResponsiveContainer,
-    } = chart
-
     return (
         <div className={`main-components p-0 ${className}`}>
             <p className={"text-lg md:text-xl font-medium text-center pt-2"}>Performance Chart</p>
