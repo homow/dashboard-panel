@@ -1,5 +1,5 @@
 import TopSection from "./TopSection/TopSection.jsx";
-import InvoiceCart from "./InvoiceCart/InvoiceCart.jsx"
+import InvoiceCart from "@pages/Analytics/InvoiceCard/InvoiceCard.jsx"
 
 export default function AnalyticsLayout() {
     return (

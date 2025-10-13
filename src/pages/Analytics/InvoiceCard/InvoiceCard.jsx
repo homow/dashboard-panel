@@ -9,20 +9,20 @@ export default function InvoiceCard() {
                     </svg>
                     <strong>MATERIAL</strong>
                 </div>
-                <h2 className="text-xl font-semibold">Invoice #3492</h2>
+                <h2 className="text-xl font-medium">Invoice #3492</h2>
             </div>
 
             {/* Sender & Recipient */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
                 <div>
-                    <h3 className="font-semibold mb-1">From:</h3>
+                    <h3 className="font-medium mb-1">From:</h3>
                     <p className={"text-secondary-txt"}>Office 149, 450 South Brand Brooklyn</p>
                     <p className={"text-secondary-txt"}>San Diego County, CA 91905, USA</p>
                     <p className={"text-secondary-txt"}>+1 (123) 456 7891</p>
                     <p className={"text-secondary-txt"}>+44 (876) 543 2198</p>
                 </div>
                 <div>
-                    <h3 className="font-semibold mb-1">To:</h3>
+                    <h3 className="font-medium mb-1">To:</h3>
                     <p className={"text-secondary-txt"}>Tommy Shelby</p>
                     <p className={"text-secondary-txt"}>Shelby Company Limited</p>
                     <p className={"text-secondary-txt"}>Small Heath, B10 DMF, UK</p>
@@ -33,7 +33,7 @@ export default function InvoiceCard() {
 
             {/* Bank Details */}
             <div className="mb-6">
-                <h3 className="font-semibold mb-1">Bank Details:</h3>
+                <h3 className="font-medium mb-1">Bank Details:</h3>
                 <p className={"text-secondary-txt"}>Bank: United Bank</p>
                 <p className={"text-secondary-txt"}>IBAN: E794526213874685</p>
                 <p className={"text-secondary-txt"}>SWIFT Code: ER18905</p>
