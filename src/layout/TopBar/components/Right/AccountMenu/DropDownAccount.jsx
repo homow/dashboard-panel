@@ -1,6 +1,6 @@
 import {useState} from "react";
 import {Link} from "react-router-dom";
-import {cn} from "@utils/ui-utils";
+import {cn} from "@/lib/utils.js";
 import Overlay from "@components/ui/Overlay";
 import AlertModal from "@components/ui/modals/AlertModal";
 import ConfirmModal from "@components/ui/modals/ConfirmModal";
