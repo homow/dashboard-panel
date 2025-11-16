@@ -1,9 +1,9 @@
-import OpenMobileNavMenuBtn from "./OpenMobileNavMenuBtn.jsx";
+import OpenMobileNavMenuBtn from "./OpenMobileNavMenuBtn";
 
-export default function LeftTopBar({setMobileNavOpen}) {
+export default function LeftTopBar() {
     return (
         <div className={"md:hidden"}>
-            <OpenMobileNavMenuBtn setMobileNavOpen={setMobileNavOpen}/>
+            <OpenMobileNavMenuBtn/>
         </div>
     )
 }
