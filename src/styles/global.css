@@ -52,7 +52,7 @@
         @apply transition-all scroll-smooth;
     }
     *::-webkit-scrollbar {
-        @apply size-3;
+        @apply size-2.5;
     }
 
     *::-webkit-scrollbar-track {
