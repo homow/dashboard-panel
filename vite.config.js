@@ -37,8 +37,13 @@ export default defineConfig(({mode}) => {
             alias: {
                 '@': path.resolve(__dirname, 'src'),
                 '@components': path.resolve(__dirname, 'src/components'),
+                '@ui': path.resolve(__dirname, 'src/components/ui'),
                 '@pages': path.resolve(__dirname, 'src/pages'),
                 '@img': path.resolve(__dirname, 'src/assets/images'),
+                '@hooks': path.resolve(__dirname, 'src/hooks'),
+                '@api': path.resolve(__dirname, 'src/lib/api'),
+                '@context': path.resolve(__dirname, 'src/context'),
+                '@utils': path.resolve(__dirname, 'src/lib/utils'),
             }
         },
         plugins: [
@@ -48,7 +53,7 @@ export default defineConfig(({mode}) => {
                 open: true,
                 gzipSize: true,
                 brotliSize: true,
-                filename: "bundle-report.html",
+                filename: "analyze.html",
             }),
         ].filter(Boolean),
         build: {
