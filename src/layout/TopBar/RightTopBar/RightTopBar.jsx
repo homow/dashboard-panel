@@ -1,7 +1,7 @@
-import Notification from "./Notification.jsx";
-import Account from "./Account.jsx";
-import ThemeSection from "./ThemeSection.jsx";
-import SearchBar from "./SearchBar.jsx";
+import Notification from "./Notification";
+import Account from "./Account";
+import ThemeSection from "./ThemeSection";
+import SearchBar from "./SearchBar";
 
 export default function RightTopBar() {
     return (
