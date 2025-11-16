@@ -1,7 +1,8 @@
-import {lazy} from "react";
 import DevMeetUp from "./DevMeetUp";
-const RadialChart = lazy(() => import("./RadialChart"))
-const UserGrowthAreaChart = lazy(() => import("./AreaChart"))
+import LazyWithSuspense from "@components/ui/suspense/LazyWithSuspense";
+
+const RadialChart = LazyWithSuspense(() => import("./RadialChart"));
+const UserGrowthAreaChart = LazyWithSuspense(() => import("./AreaChart"));
 
 export default function BottomSection() {
     return (
