@@ -15,12 +15,12 @@ function InnerMainLayout() {
             id="app-container"
             className={cn("flex flex-row min-h-svh")}
         >
-
             {/* svg icons */}
             <SvgDefs/>
 
             {/* overlay */}
             <Overlay
+                z={"z-30"}
                 flag={openMobileNav}
                 setFlag={setOpenMobileNav}
             />
