@@ -1,9 +1,9 @@
-import Notification from "./Notification";
-import Account from "./Account";
-import ThemeSection from "./ThemeSection";
-import SearchBar from "./SearchBar";
+import Notification from "./Notification/Notification";
+import Account from "./AccountMenu/AccountMenu";
+import ThemeSection from "./ThemeSection/ThemeSection";
+import SearchBar from "./SearchBar/SearchBar";
 
-export default function RightTopBar() {
+export default function LeftTopBar() {
     return (
         <div className={"flex items-center justify-between gap-4 py-3 md:flex-1"}>
 
