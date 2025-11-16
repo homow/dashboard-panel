@@ -8,6 +8,24 @@ import {visualizer} from "rollup-plugin-visualizer";
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
+const createChunks = () => {
+    const groups = {
+        vendor: ["react", "react-dom", "react-router-dom"],
+        ui: ["clsx", "tailwind-merge"],
+        charts: ["recharts"],
+    };
+
+    return (id) => {
+        if (!id.includes("node_modules")) return;
+
+        for (const [chunkName, deps] of Object.entries(groups)) {
+            if (deps.some((dep) => id.includes(dep))) {
+                return chunkName;
+            }
+        }
+    };
+};
+
 export default defineConfig(({mode}) => {
     const env = loadEnv(mode, process.cwd(), '');
 
@@ -34,13 +52,9 @@ export default defineConfig(({mode}) => {
         build: {
             rollupOptions: {
                 output: {
-                    manualChunks: {
-                        vendor: ["react", "react-dom", "react-router-dom"],
-                        ui: ["clsx", "tailwind-merge"],
-                        recharts: ["recharts"]
-                    }
-                }
-            }
-        }
+                    manualChunks: createChunks()
+                },
+            },
+        },
     };
 });
