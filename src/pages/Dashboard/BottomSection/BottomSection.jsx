@@ -1,7 +1,7 @@
-import DevMeetUp from "./DevMeetUp.jsx";
 import {lazy} from "react";
-const RadialChart = lazy(() => import("./RadialChart.jsx"))
-const UserGrowthAreaChart = lazy(() => import("./AreaChart.jsx"))
+import DevMeetUp from "./DevMeetUp";
+const RadialChart = lazy(() => import("./RadialChart"))
+const UserGrowthAreaChart = lazy(() => import("./AreaChart"))
 
 export default function BottomSection() {
     return (
@@ -16,4 +16,4 @@ export default function BottomSection() {
             <UserGrowthAreaChart className={"h-74 @2xl/main:col-span-2 @6xl/main:col-span-1 @6xl/main:h-auto"}/>
         </section>
     )
-}
+};
