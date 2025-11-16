@@ -1,12 +1,12 @@
-import RightTopBar from './RightTopBar/RightTopBar.jsx'
-import LeftTopBar from "./LeftTopBar/LeftTopBar.jsx";
+import RightTopBar from './RightTopBar/RightTopBar'
+import LeftTopBar from "./LeftTopBar/LeftTopBar";
 
-export default function TopBar({setMobileNavOpen}) {
+export default function TopBar() {
     return (
         <header className={"flex items-center justify-between top-0 h-16 md:justify-end"}>
 
             {/* left top bar */}
-            <LeftTopBar setMobileNavOpen={setMobileNavOpen}/>
+            <LeftTopBar/>
 
             {/* right top bar */}
             <RightTopBar/>
