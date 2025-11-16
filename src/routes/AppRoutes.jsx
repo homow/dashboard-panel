@@ -1,11 +1,21 @@
 import {lazy} from "react";
 import {useRoutes} from "react-router-dom";
+import SuspenseBoundary from "@components/ui/SuspenseBoundary";
 
-import SuspenseBoundary from "@components/ui/SuspenseBoundary.jsx";
-const Dashboard = lazy(() => import("@pages/Dashboard"));
-const Analytics = lazy(() => import("@pages/Analytics"));
-const User = lazy(() => import("@pages/User"));
-const Rules = lazy(() => import("@pages/Rules"));
+const lazyWithSuspense = (importFunc, className) => {
+    const Component = lazy(importFunc);
+
+    return props => (
+        <SuspenseBoundary className={className}>
+            <Component {...props}/>
+        </SuspenseBoundary>
+    );
+};
+
+const Dashboard = lazyWithSuspense(() => import("@pages/Dashboard"));
+const Analytics = lazyWithSuspense(() => import("@pages/Analytics"));
+const User = lazyWithSuspense(() => import("@pages/User"));
+const Rules = lazyWithSuspense(() => import("@pages/Rules"));
 
 const routes = [
     {path: "/", element: <Dashboard/>},
