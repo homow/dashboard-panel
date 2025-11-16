@@ -1,6 +1,6 @@
 import {useState} from 'react'
-import SideBarHeader from "./SideBarHeader.jsx";
-import SideBarMenu from "./SideBarMenu.jsx";
+import SideBarHeader from "./components/SideBarHeader.jsx";
+import SideBarMenu from "./components/SideBarMenu.jsx";
 
 export default function SideBar({setMobileNavOpen, mobileNavOpen}) {
     const [collapsed, setCollapsed] = useState(false)
