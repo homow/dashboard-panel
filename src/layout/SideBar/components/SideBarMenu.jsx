@@ -1,7 +1,7 @@
 import {NavLink} from "react-router-dom";
 import {useMobileNav} from "@/context/MobileNavContext";
 import {useCollapsedMenu} from "@/context/CollapsedMenuContext";
-import Icon from "@components/ui/icons/Icon.jsx";
+import Icon from "@components/ui/icons/Icon";
 import {cn} from "@/lib/utils.js";
 
 function SideBarLinks({ ...props}) {
