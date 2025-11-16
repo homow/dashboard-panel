@@ -1,12 +1,12 @@
-export default function SideBarHeader({collapsed, setCollapsed}) {
+import {useCollapsedMenu} from "@/context/CollapsedMenuContext";
+import Icon from "@components/ui/icons/Icon";
+import {cn} from "@/lib/utils.js";
 
-    const toggleCollapse = () => {
-        document.documentElement.style.setProperty(
-            "--spacing-custom",
-            !collapsed ? "80px" : "260px"
-        );
-        setCollapsed(!collapsed)
-    };
+export default function SideBarHeader() {
+    const {collapsed, setCollapsed, currentCollapsed} = useCollapsedMenu();
+
+    // toggle collapse when click to button
+    const toggleCollapse = () => setCollapsed(!collapsed);
 
     return (
         <div className={"relative flex items-center justify-between h-16"}>
@@ -18,16 +18,14 @@ export default function SideBarHeader({collapsed, setCollapsed}) {
                         <use href="#logo-icon"></use>
                     </svg>
                 </span>
-                <span className={`font-bold ${collapsed && "hidden"}`}>MATERIAL</span>
+                <span className={cn("font-bold", currentCollapsed && "hidden")}>MATERIAL</span>
             </a>
 
             <span
                 onClick={toggleCollapse}
-                className={`hidden md:inline absolute -right-5.5 cursor-pointer transition-all duration-500 ${collapsed && "-rotate-180"}`}
+                className={cn("hidden md:inline absolute -right-5.5 cursor-pointer transition-all duration-500", collapsed && "-rotate-180")}
             >
-                <svg className={"size-5"}>
-                    <use href="#chevronDoubleRight-icon"></use>
-                </svg>
+                <Icon icon={"chevronDoubleRight"}/>
             </span>
         </div>
     );
