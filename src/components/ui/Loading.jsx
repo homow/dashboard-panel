@@ -1,4 +1,4 @@
-import {cn} from "@utils/ui-utils.js";
+import {cn} from "@/lib/utils.js";
 
 export default function Loading({className, message = "Loading..."}) {
     return (
