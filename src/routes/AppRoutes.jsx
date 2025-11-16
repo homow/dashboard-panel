@@ -10,6 +10,7 @@ const Dashboard = LazyWithSuspense(() => import("@pages/Dashboard"));
 const Analytics = LazyWithSuspense(() => import("@pages/Analytics"));
 const User = LazyWithSuspense(() => import("@pages/User"));
 const Rules = LazyWithSuspense(() => import("@pages/Rules"));
+const NotFound = LazyWithSuspense(() => import("@pages/NotFound"));
 
 const routes = [
     {
@@ -27,7 +28,7 @@ const routes = [
                 {path: "analytics", element: <Analytics/>},
                 {path: "user", element: <User/>},
                 {path: "rules", element: <Rules/>},
-                {path: "*",}
+                {path: "*", element: <NotFound/>}
             ]
         }]
     },
