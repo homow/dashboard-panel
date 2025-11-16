@@ -1,8 +1,8 @@
 import {useEffect, useState, useRef} from "react";
-import Button from "@ui/Button";
-import Input from "@ui/forms/Input";
-import CheckBox from "@ui/forms/CheckBox";
-import AlertModal from "@ui/modals/AlertModal";
+import Button from "@/components/ui/Button";
+import Input from "@/components/ui/forms/Input";
+import CheckBox from "@/components/ui/forms/CheckBox";
+import AlertModal from "@/components/ui/modals/AlertModal";
 import {useAuth} from "@/context/AuthContext";
 import {cn} from "@/lib/utils.js";
 
@@ -154,7 +154,7 @@ export default function Login() {
                                 parentClassName={"relative"}
                                 onChange={setPasswordHandler}
                                 type={showPassword ? "text" : "password"}
-                                className={cn("text-sm xs:text-base", errors.password && "border-rose-600 bg-rose-600/10")}
+                                className={cn("text-sm xs:text-base")}
                                 hasError={errors.password}
                             >
                                 <button
