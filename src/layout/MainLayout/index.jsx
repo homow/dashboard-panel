@@ -5,12 +5,16 @@ import SvgDefs from "@components/ui/icons/SvgDefs";
 import SideBar from "@/layout/SideBar";
 import TopBar from "@/layout/TopBar";
 import Footer from "@/layout/Footer";
+import {cn} from "@/lib/utils.js";
 
 function InnerMainLayout() {
     const {openMobileNav, setOpenMobileNav} = useMobileNav();
 
     return (
-        <section id="app-container" className="flex flex-row min-h-screen">
+        <section
+            id="app-container"
+            className={cn("flex flex-row min-h-svh")}
+        >
 
             {/* svg icons */}
             <SvgDefs/>
@@ -24,19 +28,23 @@ function InnerMainLayout() {
             {/* side bar menu and links */}
             <SideBar/>
 
-            <main
-                id="main"
-                className={"relative h-full pb-5 space-y-6 @container/main mr-custom"
-            }>
-                {/* top bar | header */}
-                <TopBar/>
+            <section
+                className={cn("flex-1 flex flex-col ml-custom transition-all px-3 sm:px-6")}
+            >
+                <main
+                    id="main"
+                    className={"@container/main relative h-full pb-5 space-y-6"}
+                >
+                    {/* top bar | header */}
+                    <TopBar/>
 
-                {/* Routes */}
-                <Outlet/>
+                    {/* Routes */}
+                    <Outlet/>
 
-                {/* footer */}
-                <Footer/>
-            </main>
+                    {/* footer */}
+                    <Footer/>
+                </main>
+            </section>
         </section>
     );
 }
@@ -44,7 +52,7 @@ function InnerMainLayout() {
 export default function MainLayout() {
     return (
         <MobileNavProvider>
-            <InnerMainLayout/>;
+            <InnerMainLayout/>
         </MobileNavProvider>
     );
 };
