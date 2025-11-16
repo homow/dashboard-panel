@@ -1,9 +1,10 @@
 import {Suspense} from 'react'
+import Loading from "./Loading";
 
-export default function SuspenseBoundary({children, fallback}) {
+export default function SuspenseBoundary({children, fallback, className}) {
     return (
-        <Suspense fallback={fallback || <div className="text-secondary-txt text-xl text-center p-4">Loading...</div>}>
+        <Suspense fallback={fallback || <Loading message={"Loading.."} className={className}/>}>
             {children}
         </Suspense>
     )
-}
+};
