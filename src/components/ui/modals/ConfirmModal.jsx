@@ -1,5 +1,5 @@
 import {useEffect, useRef} from "react";
-import {cn} from "@utils/ui-utils.js";
+import {cn} from "@/lib/utils.js";
 
 export default function ConfirmModal({isOpen, message, title = "Submit", onConfirm, onCancel, confirmText = "submit", cancelText = "cancel", dangerMode = false, z = "z-30"}) {
     const buttonRef = useRef(null);
