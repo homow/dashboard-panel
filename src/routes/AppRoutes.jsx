@@ -1,25 +1,15 @@
-import {lazy} from "react";
 import {useRoutes} from "react-router-dom";
-import SuspenseBoundary from "@components/ui/SuspenseBoundary";
+import SuspenseBoundary from "@components/ui/suspense/SuspenseBoundary";
+import LazyWithSuspense from "@components/ui/suspense/LazyWithSuspense";
 import PublicRoutes from "@/routes/PublicRoutes";
 import PrivateRoutes from "@/routes/PrivateRoutes";
 import MainLayout from "@/layout/MainLayout";
 
-const lazyWithSuspense = (importFunc, className) => {
-    const Component = lazy(importFunc);
-
-    return props => (
-        <SuspenseBoundary className={className}>
-            <Component {...props}/>
-        </SuspenseBoundary>
-    );
-};
-
-const Login = lazyWithSuspense(() => import("@pages/Login"));
-const Dashboard = lazyWithSuspense(() => import("@pages/Dashboard"));
-const Analytics = lazyWithSuspense(() => import("@pages/Analytics"));
-const User = lazyWithSuspense(() => import("@pages/User"));
-const Rules = lazyWithSuspense(() => import("@pages/Rules"));
+const Login = LazyWithSuspense(() => import("@pages/Login"));
+const Dashboard = LazyWithSuspense(() => import("@pages/Dashboard"));
+const Analytics = LazyWithSuspense(() => import("@pages/Analytics"));
+const User = LazyWithSuspense(() => import("@pages/User"));
+const Rules = LazyWithSuspense(() => import("@pages/Rules"));
 
 const routes = [
     {
