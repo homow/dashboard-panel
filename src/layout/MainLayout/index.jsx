@@ -33,7 +33,7 @@ function InnerMainLayout() {
             >
                 <main
                     id="main"
-                    className={"@container/main relative h-full pb-5 space-y-6"}
+                    className={"@container/main relative h-full pb-5"}
                 >
                     {/* top bar | header */}
                     <TopBar/>
