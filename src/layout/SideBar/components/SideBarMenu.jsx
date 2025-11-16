@@ -2,6 +2,8 @@ import {NavLink} from "react-router-dom";
 
 function SideBarLinks({setMobileNavOpen, collapsed, ...props}) {
     const {title, dataLinks} = props.data;
+    const {setOpenMobileNav} = useMobileNav();
+    const {currentCollapsed} = useCollapsedMenu();
 
     return (
         <div>
