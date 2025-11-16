@@ -13,19 +13,15 @@ export default function SideBarHeader() {
 
             {/* brand and logo */}
             <a target="_blank" href="https://homow.ir" className={"pl-4 flex flex-row items-center gap-2 hover:opacity-100"}>
-                <span>
-                    <svg className={"w-7.5 h-[23px]"}>
-                        <use href="#logo-icon"></use>
-                    </svg>
-                </span>
-                <span className={cn("font-bold", currentCollapsed && "hidden")}>MATERIAL</span>
+                <Icon icon={"logo"} className={"w-7.5 h-[23px]"}/>
+                <span className={cn("font-medium", currentCollapsed && "hidden")}>MATERIAL</span>
             </a>
 
             <span
                 onClick={toggleCollapse}
-                className={cn("hidden md:inline absolute -right-5.5 cursor-pointer transition-all duration-500", collapsed && "-rotate-180")}
+                className={cn("hidden md:flex absolute -right-5.5 cursor-pointer transition-all duration-500", collapsed && "-rotate-180")}
             >
-                <Icon icon={"chevronDoubleRight"}/>
+                <Icon className={"size-5.5"} icon={"chevronDoubleRight"}/>
             </span>
         </div>
     );
