@@ -7,15 +7,17 @@ const Analytics = lazy(() => import("@pages/Analytics"));
 const User = lazy(() => import("@pages/User"));
 const Rules = lazy(() => import("@pages/Rules"));
 
+const routes = [
+    {path: "/", element: <Dashboard/>},
+    {path: "analytics", element: <Analytics/>},
+    {path: "user", element: <User/>},
+    {path: "rules", element: <Rules/>},
+];
+
 export default function AppRoutes() {
     return (
         <SuspenseBoundary>
-            {useRoutes([
-                {path: "/", element: <Dashboard/>},
-                {path: "analytics", element: <Analytics/>},
-                {path: "user", element: <User/>},
-                {path: "rules", element: <Rules/>},
-            ])}
+            {useRoutes(routes)}
         </SuspenseBoundary>
     );
 }
