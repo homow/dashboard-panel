@@ -89,11 +89,13 @@ export default function DataTable({columns, data}) {
             <div className="flex flex-col items-center justify-between gap-4 space-x-2 py-4 @lg/main:flex-row">
                 <div className={"space-x-4"}>
                     <Button
+                        className={"max-w-max"}
                         onClick={() => table.previousPage()}
                         disabled={!table.getCanPreviousPage()}
                         text={"Previous"}
                     />
                     <Button
+                        className={"max-w-max"}
                         onClick={() => table.nextPage()}
                         disabled={!table.getCanNextPage()}
                         text={"Next"}
