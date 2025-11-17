@@ -16,9 +16,9 @@ import {
     TableHead,
     TableHeader,
     TableRow,
-} from "@components/ui/table.jsx"
+} from "@components/ui/table"
 
-import Button from "@components/ui/Button.jsx"
+import Button from "@components/ui/Button"
 
 export default function DataTable({columns, data}) {
     const [pagination, setPagination] = useState({
