@@ -1,6 +1,6 @@
-import {lazy} from "react";
+import LazyWithSuspense from "@ui/suspense/LazyWithSuspense";
 import TopSection from "./TopSection/TopSection";
-const SalaryChart = lazy(() => import("./SalaryChart/SalaryChart"));
+const SalaryChart = LazyWithSuspense(() => import("./SalaryChart/SalaryChart"));
 import BottomSection from "./BottomSection/BottomSection";
 
 export default function DashboardLayout() {
