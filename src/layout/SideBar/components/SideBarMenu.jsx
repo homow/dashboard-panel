@@ -1,10 +1,10 @@
 import {NavLink} from "react-router-dom";
-import {useMobileNav} from "@/context/MobileNavContext";
-import {useCollapsedMenu} from "@/context/CollapsedMenuContext";
+import {useMobileNav} from "@context/MobileNavContext";
+import {useCollapsedMenu} from "@context/CollapsedMenuContext";
 import Icon from "@components/ui/icons/Icon";
 import {cn} from "@/lib/utils.js";
 
-function SideBarLinks({ ...props}) {
+function SideBarLinks({...props}) {
     const {title, dataLinks} = props.data;
     const {setOpenMobileNav} = useMobileNav();
     const {currentCollapsed} = useCollapsedMenu();
@@ -12,9 +12,15 @@ function SideBarLinks({ ...props}) {
     return (
         <div>
             {/* title links */}
-            <div className={`h-4.5 flex items-center gap-4 ${currentCollapsed && "px-2"}`}>
-                <div className={`w-10 h-px bg-disable-txt ${currentCollapsed && "hidden"}`}></div>
-                <p className={`text-sm text-disable-txt ${currentCollapsed && "hidden"}`}>{title}</p>
+            <div className={cn("h-4.5 flex items-center gap-4", currentCollapsed && "px-2")}>
+
+                {/* border */}
+                <div className={cn("w-10 h-px bg-disable-txt", currentCollapsed && "hidden")}></div>
+
+                {/* title */}
+                <p className={cn("text-sm text-disable-txt", currentCollapsed && "hidden")}>{title}</p>
+
+                {/* border */}
                 <div className="flex-1 h-px bg-disable-txt"></div>
             </div>
 
@@ -22,16 +28,13 @@ function SideBarLinks({ ...props}) {
             <ul className={"mt-3 space-y-1.5"}>
                 {dataLinks && dataLinks.map(link => (
                     <li key={link.text}>
-                        <NavLink
-                            onClick={() => setOpenMobileNav && setOpenMobileNav(false)}
-                            to={link.url}
-                            className={({isActive}) => cn("h-10.5 flex items-center pl-5.5 py-2 flex-row gap-3 w-full rounded-r-full", isActive && "grad-links")}>
+                        <NavLink onClick={() => setOpenMobileNav && setOpenMobileNav(false)} to={link.url} className={({isActive}) => cn("h-10.5 flex items-center pl-5.5 py-2 flex-row gap-3 w-full rounded-r-full hover:opacity-100", isActive && "grad-links", !isActive && "hover:bg-sky-300 hover:text-gray-900  active:bg-sky-300 active:text-gray-900")}>
 
                             {/* icon */}
-                            <Icon icon={link.icon} />
+                            <Icon icon={link.icon}/>
 
                             {/* text of link */}
-                            <span className={`${currentCollapsed && "hidden"}`}>
+                            <span className={cn(currentCollapsed && "hidden")}>
                                 {link.text}
                             </span>
                         </NavLink>
@@ -65,4 +68,4 @@ export default function SideBarMenu() {
             ))}
         </div>
     )
-}
+};
