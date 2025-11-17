@@ -91,9 +91,8 @@ export default function DataTable({columns, data}) {
                     <Button
                         onClick={() => table.previousPage()}
                         disabled={!table.getCanPreviousPage()}
-                    >
-                        Previous
-                    </Button>
+                        text={"Previous"}
+                    />
                     <Button
                         onClick={() => table.nextPage()}
                         disabled={!table.getCanNextPage()}
