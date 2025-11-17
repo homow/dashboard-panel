@@ -1,5 +1,5 @@
 import {useEffect} from "react";
-import AnalyticsLayout from "./AnalyticsLayout.jsx";
+import AnalyticsLayout from "./AnalyticsLayout";
 
 export default function Analytics() {
     useEffect(() => {
