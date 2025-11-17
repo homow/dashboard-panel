@@ -6,7 +6,7 @@ const UserGrowthAreaChart = LazyWithSuspense(() => import("./AreaChart"));
 
 export default function BottomSection() {
     return (
-        <section className={"overflow-hidden grid grid-cols-1 gap-6 @2xl/main:grid-cols-2 @6xl/main:grid-cols-3"}>
+        <section className={"mt-6 overflow-hidden grid grid-cols-1 gap-6 @2xl/main:grid-cols-2 @6xl/main:grid-cols-3"}>
             {/* meet up section */}
             <DevMeetUp/>
 
