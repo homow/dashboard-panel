@@ -1,12 +1,12 @@
-"use client"
+"use client";
 
-import { useState, useEffect } from "react"
+import {useState, useEffect} from "react";
 import {
     flexRender,
     getCoreRowModel,
     useReactTable,
     getPaginationRowModel
-} from "@tanstack/react-table"
+} from "@tanstack/react-table";
 
 import {
     Table,
@@ -15,41 +15,38 @@ import {
     TableHead,
     TableHeader,
     TableRow,
-} from "@components/ui/table"
+} from "@components/ui/table";
 
-import Button from "@components/ui/Button"
+import Button from "@components/ui/Button";
 
-export default function DataTable({ columns, data }) {
+export default function DataTable({columns, data}) {
     const [pagination, setPagination] = useState({
         pageIndex: 0,
         pageSize: 10,
-    })
+    });
 
     const table = useReactTable({
         data,
         columns,
-        state: { pagination },
+        state: {pagination},
         onPaginationChange: setPagination,
         getCoreRowModel: getCoreRowModel(),
         getPaginationRowModel: getPaginationRowModel(),
         autoResetPageIndex: false,
-    })
+    });
 
     const pageIndex = table.getState().pagination.pageIndex
     const pageSize = table.getState().pagination.pageSize
     const totalRows = table.getFilteredRowModel().rows.length
     const pageCount = Math.ceil(totalRows / pageSize)
 
-    // ✅ همیشه مطمئن می‌شیم pageIndex از آخرین صفحه فراتر نره
     useEffect(() => {
-        if (pageIndex >= pageCount && pageCount > 0) {
-            setPagination(prev => ({ ...prev, pageIndex: pageCount - 1 }))
-        }
-    }, [pageIndex, pageCount])
+        if (pageIndex >= pageCount && pageCount > 0) setPagination(prev => ({...prev, pageIndex: pageCount - 1}));
+    }, [pageIndex, pageCount]);
 
-    const seen = Math.min((pageIndex + 1) * pageSize, totalRows)
-    const canPrev = pageIndex > 0
-    const canNext = pageIndex + 1 < pageCount
+    const seen = Math.min((pageIndex + 1) * pageSize, totalRows);
+    const canPrev = pageIndex > 0;
+    const canNext = pageIndex + 1 < pageCount;
 
     return (
         <div className="main-components">
@@ -123,5 +120,5 @@ export default function DataTable({ columns, data }) {
                 </div>
             </div>
         </div>
-    )
-}
+    );
+};
