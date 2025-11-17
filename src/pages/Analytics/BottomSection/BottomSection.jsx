@@ -1,8 +1,8 @@
-import {lazy} from "react";
+import LazyWithSuspense from "@ui/suspense/LazyWithSuspense";
 
-const TotalSalesChart = lazy(() => import("./TotalChartLine.jsx"));
-const PerformanceChart = lazy(() => import("./PerformanceChart.jsx"));
-const SalesOverviewChart = lazy(() => import("./SalesOverviewChart.jsx"));
+const TotalSalesChart = LazyWithSuspense(() => import("./TotalChartLine"));
+const PerformanceChart = LazyWithSuspense(() => import("./PerformanceChart"));
+const SalesOverviewChart = LazyWithSuspense(() => import("./SalesOverviewChart"));
 
 export default function BottomSection() {
     return (
