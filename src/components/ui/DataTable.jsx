@@ -97,9 +97,8 @@ export default function DataTable({columns, data}) {
                     <Button
                         onClick={() => table.nextPage()}
                         disabled={!table.getCanNextPage()}
-                    >
-                        Next
-                    </Button>
+                        text={"Next"}
+                    />
                 </div>
                 <div className="flex items-center gap-6 py-2 text-sm text-muted-foreground">
                     <div>
