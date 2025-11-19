@@ -5,7 +5,7 @@ import PublicRoutes from "@/routes/PublicRoutes";
 import PrivateRoutes from "@/routes/PrivateRoutes";
 import MainLayout from "@/layout/MainLayout";
 
-const Login = LazyWithSuspense(() => import("@pages/Login"));
+const Login = LazyWithSuspense(() => import("@pages/Login"), "fixed inset-0");
 const Dashboard = LazyWithSuspense(() => import("@pages/Dashboard"));
 const Analytics = LazyWithSuspense(() => import("@pages/Analytics"));
 const User = LazyWithSuspense(() => import("@pages/User"));
