@@ -20,10 +20,21 @@ const createChunks = () => {
 
         if (id.includes("node_modules/.vite")) return;
 
-        for (const [name, deps] of Object.entries(chunkGroups)) {
-            if (deps.some(dep => id.includes(dep))) {
-                return name;
-            }
+        if (
+            id.includes("react") ||
+            id.includes("react-dom") ||
+            id.includes("react-router-dom") ||
+            id.includes("recharts")
+        ) {
+            return "vendor";
+        }
+
+        if (id.includes("recharts")) {
+            return "charts";
+        }
+
+        if (id.includes("clsx") || id.includes("tailwind-merge")) {
+            return "ui";
         }
     };
 };
@@ -57,6 +68,7 @@ export default defineConfig(({mode}) => {
             }),
         ].filter(Boolean),
         build: {
+            sourcemap: true,
             cssCodeSplit: true,
             rollupOptions: {
                 output: {
