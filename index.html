@@ -26,13 +26,21 @@
 
     <!-- script -->
     <script>
+        const params = new URLSearchParams(window.location.search);
+        const redirectPath = params.get('redirect');
+        if (redirectPath) {
+            window.history.replaceState(null, '', redirectPath);
+        }
+
         document.documentElement.classList.toggle("dark",
             localStorage.theme === "dark" || (!localStorage.theme && window.matchMedia("(prefers-color-scheme: dark)").matches)
         )
     </script>
-  <script type="module" crossorigin src="/dashboard-panel/assets/index-CTv6WQMD.js"></script>
-  <link rel="modulepreload" crossorigin href="/dashboard-panel/assets/vendor-BQriZpBX.js">
-  <link rel="stylesheet" crossorigin href="/dashboard-panel/assets/index-BmSUUa8D.css">
+  <script type="module" crossorigin src="/dashboard-panel/assets/index-05UYzyRR.js"></script>
+  <link rel="modulepreload" crossorigin href="/dashboard-panel/assets/ui-BJeS7sC5.js">
+  <link rel="modulepreload" crossorigin href="/dashboard-panel/assets/charts-CnCOB2CD.js">
+  <link rel="modulepreload" crossorigin href="/dashboard-panel/assets/vendor-BTz0x3c1.js">
+  <link rel="stylesheet" crossorigin href="/dashboard-panel/assets/index-BUrH6j3J.css">
 </head>
 <body>
 <div id="root"></div>
