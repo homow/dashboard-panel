@@ -45,3 +45,4 @@
 
 # --- Prevent diff on binaries ---
 *.lock      binary
+
