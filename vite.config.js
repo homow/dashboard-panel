@@ -8,37 +8,6 @@ import {visualizer} from "rollup-plugin-visualizer";
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-const chunkGroups = {
-    vendor: ["react", "react-dom", "react-router-dom"],
-    ui: ["clsx", "tailwind-merge"],
-    charts: ["recharts"],
-};
-
-const createChunks = () => {
-    return (id) => {
-        if (!id.includes("node_modules")) return;
-
-        if (id.includes("node_modules/.vite")) return;
-
-        if (
-            id.includes("react") ||
-            id.includes("react-dom") ||
-            id.includes("react-router-dom") ||
-            id.includes("recharts")
-        ) {
-            return "vendor";
-        }
-
-        if (id.includes("recharts")) {
-            return "charts";
-        }
-
-        if (id.includes("clsx") || id.includes("tailwind-merge")) {
-            return "ui";
-        }
-    };
-};
-
 export default defineConfig(({mode}) => {
     const env = loadEnv(mode, process.cwd(), '');
 
@@ -55,6 +24,8 @@ export default defineConfig(({mode}) => {
                 '@api': path.resolve(__dirname, 'src/lib/api'),
                 '@context': path.resolve(__dirname, 'src/context'),
                 '@utils': path.resolve(__dirname, 'src/lib/utils'),
+                react: path.resolve(__dirname, 'node_modules/react'),
+                'react-dom': path.resolve(__dirname, 'node_modules/react-dom'),
             }
         },
         plugins: [
@@ -68,13 +39,7 @@ export default defineConfig(({mode}) => {
             }),
         ].filter(Boolean),
         build: {
-            sourcemap: true,
             cssCodeSplit: true,
-            rollupOptions: {
-                output: {
-                    manualChunks: createChunks()
-                },
-            },
         },
     };
 });
