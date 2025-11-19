@@ -1,7 +1,18 @@
-export default function Button({children, ...props}) {
+import {cn} from "@/lib/utils.js";
+
+export default function Button({text = "Click", onClick, type = "button", className = "", disabled = false, ...props}) {
     return (
-        <button {...props} className={"bg-sky-500 text-white text-sm cursor-pointer font-medium rounded-md px-2.5 py-2  hover:bg-sky-700 active:bg-sky-700 transition-all disabled:bg-sky-300 disabled:text-slate-50 disabled:cursor-not-allowed disabled:opacity-70"}>
-            {children}
+        <button
+            type={type}
+            onClick={onClick}
+            className={cn(
+                "w-full bg-sky-600 hover:bg-sky-700 active:bg-sky-700 text-white py-2 px-3 rounded-lg transition font-medium cursor-pointer text-sm xs:text-base",
+                disabled && "opacity-60 cursor-not-allowed",
+                className
+            )}
+            {...props}
+        >
+            {text}
         </button>
-    )
-}
+    );
+};

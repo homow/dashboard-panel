@@ -1,21 +1,43 @@
-import {lazy} from "react";
 import {useRoutes} from "react-router-dom";
+import SuspenseBoundary from "@components/ui/suspense/SuspenseBoundary";
+import LazyWithSuspense from "@components/ui/suspense/LazyWithSuspense";
+import PublicRoutes from "@/routes/PublicRoutes";
+import PrivateRoutes from "@/routes/PrivateRoutes";
+import MainLayout from "@/layout/MainLayout";
 
-import SuspenseBoundary from "@components/ui/SuspenseBoundary.jsx";
-const Dashboard = lazy(() => import("@pages/Dashboard"));
-const Analytics = lazy(() => import("@pages/Analytics"));
-const User = lazy(() => import("@pages/User"));
-const Rules = lazy(() => import("@pages/Rules"));
+const Login = LazyWithSuspense(() => import("@pages/Login"));
+const Dashboard = LazyWithSuspense(() => import("@pages/Dashboard"));
+const Analytics = LazyWithSuspense(() => import("@pages/Analytics"));
+const User = LazyWithSuspense(() => import("@pages/User"));
+const Rules = LazyWithSuspense(() => import("@pages/Rules"));
+const NotFound = LazyWithSuspense(() => import("@pages/NotFound"));
 
-export default function AppRoutes() {
-    return (
-        <SuspenseBoundary>
-            {useRoutes([
+const routes = [
+    {
+        element: <PublicRoutes/>,
+        children: [
+            {path: "/login", element: <Login/>},
+        ]
+    },
+    {
+        element: <PrivateRoutes/>,
+        children: [{
+            element: <MainLayout/>,
+            children: [
                 {path: "/", element: <Dashboard/>},
                 {path: "analytics", element: <Analytics/>},
                 {path: "user", element: <User/>},
                 {path: "rules", element: <Rules/>},
-            ])}
+                {path: "*", element: <NotFound/>}
+            ]
+        }]
+    },
+];
+
+export default function AppRoutes() {
+    return (
+        <SuspenseBoundary>
+            {useRoutes(routes)}
         </SuspenseBoundary>
     );
 }

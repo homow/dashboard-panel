@@ -1,4 +1,5 @@
 import {AreaChart, Area, XAxis, YAxis, Tooltip, ResponsiveContainer} from "recharts";
+import {cn} from "@/lib/utils.js";
 
 function ChartGradientDefs() {
     return (
@@ -28,7 +29,7 @@ export default function SalaryChart() {
     };
 
     return (
-        <section className={`w-full h-56 overflow-hidden py-8 px-2 rounded-md shadow-custom bg-gradient-to-br from-primary-bg via-main-bg to-primary-bg @2xl/main:h-70`}>
+        <section className={cn("w-full h-56 overflow-hidden mt-6 py-8 px-2 rounded-md shadow-custom bg-gradient-to-br from-primary-bg via-main-bg to-primary-bg @2xl/main:h-70")}>
             <h2 className="text-lg font-semibold mb-3">Weekly Activity</h2>
 
             <ResponsiveContainer width="100%" height="100%">

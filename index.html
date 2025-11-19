@@ -27,6 +27,12 @@
     <!-- script -->
     <script type="module" src="/src/main.jsx"></script>
     <script>
+        const params = new URLSearchParams(window.location.search);
+        const redirectPath = params.get('redirect');
+        if (redirectPath) {
+            window.history.replaceState(null, '', redirectPath);
+        }
+
         document.documentElement.classList.toggle("dark",
             localStorage.theme === "dark" || (!localStorage.theme && window.matchMedia("(prefers-color-scheme: dark)").matches)
         )

@@ -1,11 +1,12 @@
-import DevMeetUp from "./DevMeetUp.jsx";
-import {lazy} from "react";
-const RadialChart = lazy(() => import("./RadialChart.jsx"))
-const UserGrowthAreaChart = lazy(() => import("./AreaChart.jsx"))
+import DevMeetUp from "./DevMeetUp";
+import LazyWithSuspense from "@components/ui/suspense/LazyWithSuspense";
+
+const RadialChart = LazyWithSuspense(() => import("./RadialChart"));
+const UserGrowthAreaChart = LazyWithSuspense(() => import("./AreaChart"));
 
 export default function BottomSection() {
     return (
-        <section className={"overflow-hidden grid grid-cols-1 gap-6 @2xl/main:grid-cols-2 @6xl/main:grid-cols-3"}>
+        <section className={"mt-6 overflow-hidden grid grid-cols-1 gap-6 @2xl/main:grid-cols-2 @6xl/main:grid-cols-3"}>
             {/* meet up section */}
             <DevMeetUp/>
 
@@ -16,4 +17,4 @@ export default function BottomSection() {
             <UserGrowthAreaChart className={"h-74 @2xl/main:col-span-2 @6xl/main:col-span-1 @6xl/main:h-auto"}/>
         </section>
     )
-}
+};
