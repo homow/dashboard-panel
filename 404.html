@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="refresh" content="0; url=/"/>
+    <title></title>
+
+    <script type="text/javascript">
+        const redirectTo = location.pathname + location.search + location.hash;
+        window.location.replace('/home-nest/?redirect=' + encodeURIComponent(redirectTo));
+    </script>
+</head>
+</html>
